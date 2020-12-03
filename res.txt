@@ -1,0 +1,5 @@
+primary-color :#0CA750
+lik-primary : #17C856 , 419174
+brown : DEDEDE
+
+bg : 2F2E41

@@ -1,0 +1,127 @@
+
+
+/*
+primary-color :#0CA750
+lik-primary : #17C856 , 419174
+brown : DEDEDE
+
+bg : 2F2E41
+*/
+$primary-color:rgb(0, 109, 119);
+$secondary-color : #83c5be;
+$off-white : #f1faee;
+$blue : #1d3557;
+
+$primary-font : 'Maven Pro', sans-serif;
+$secondary-font : 'Montserrat', sans-serif;
+
+$green : rgba(0, 255, 132, 0.871);
+$dark-green : #19a762de;
+$brown : #dedede9c;
+
+:root{
+    font-size: 10px;
+    font-family: $primary-font;
+}
+
+h1{
+    font-size: 3.6rem;
+}
+h2{
+    font-size: 2.6rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+//utility
+
+.active{
+    color : $green !important;
+    position: relative;
+    border-bottom : 1.5px solid $green;
+}
+
+.active::before{
+    content: "";
+    height: .2rem;
+    width: 100%;
+    display: inline-block;
+    color : #fff;
+    position: absolute;
+    top : 100%;
+}
+
+//heading
+
+.heading
+{
+    
+    text-transform: uppercase;
+        margin: 4rem 0;
+        color : $blue;
+        text-align: center;
+        h2{
+            display: inline-block;
+            position: relative;
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 10rem;
+                height: .2rem;
+                position: absolute;
+                top:45%;
+                right : -45%;
+                background : $secondary-color;
+            }
+
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 10rem;
+                height: .2rem;
+                position: absolute;
+                top:45%;
+                left : -45%;
+                background :  $secondary-color;
+            }
+
+            .circle-left{
+                display: inline-block;
+                position: absolute;
+                width : 1.8rem;
+                height: 1.8rem;
+                border-radius: 50%;
+                background : $secondary-color;
+                top : 20%;
+                left : -45%;
+            }
+
+            .circle-right{
+                display: inline-block;
+                position: absolute;
+                width : 1.8rem;
+                height: 1.8rem;
+                border-radius: 50%;
+                background : $secondary-color;
+                top : 20%;
+                right : -45%;
+                z-index : 2;
+            }
+        }
+       
+       
+}
+
+
+//overlay
+
+.overlay{
+    position : absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: .4s;
+    z-index: 5;
+    background: rgba(0, 0, 0,.7);
+    
+}

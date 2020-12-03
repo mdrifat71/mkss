@@ -1,0 +1,53 @@
+#hero{
+    margin-top : 8.4rem;
+    background-color: $brown;
+    font-family: $secondary-font;   
+
+
+    .hero-img{
+        position: relative;
+        img{
+            width : 100vw;
+        }
+    }
+
+    
+    .motto-container{
+        z-index: 6;
+        position: absolute;
+        top : 60%;
+        left : 55%;
+        transform: translateX(-50%) translateY(-50%);
+        h1{
+            
+            color : rgba(0, 255, 132, 1);
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .explore-btn{
+            outline: none;
+            font-size: 1.6rem;
+            padding: .8rem 3rem;
+            color : #333;
+            text-transform: capitalize;
+            font-weight: 600;
+            background : $green;
+            border: 1px solid $green;
+            z-index: 6;
+            margin-top : 1rem;
+            transition: .4s;
+            &:hover{
+                background-color: transparent;
+                color : $green;
+
+                i{
+                    color : $green;
+                }
+            }
+            i{
+                margin-left : 1rem;
+            }
+        }
+    }
+}
