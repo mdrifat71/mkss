@@ -11,9 +11,12 @@ class Sectors extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $img;
+    public $title;
+    public function __construct($img, $title)
     {
-        //
+        $this->img = $img;
+        $this->title = $title;
     }
 
     /**

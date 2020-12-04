@@ -7,17 +7,28 @@ brown : DEDEDE
 
 bg : 2F2E41
 */
-$primary-color:rgb(0, 109, 119);
-$secondary-color : #83c5be;
+
+$primary-color:#05386b;
+$secondary-color : #444;
+//$background : ;
+//$background-light : ;
+
+// $primary-color:rgb(0, 109, 119);
+// $secondary-color : #83c5be;
+// $background : ;
+// $background-light : ;
+
+
 $off-white : #f1faee;
 $blue : #1d3557;
+$green : rgba(0, 255, 132, 0.871);
+$dark-green : #19a762de;
+$brown : #dedede9c;
 
 $primary-font : 'Maven Pro', sans-serif;
 $secondary-font : 'Montserrat', sans-serif;
 
-$green : rgba(0, 255, 132, 0.871);
-$dark-green : #19a762de;
-$brown : #dedede9c;
+
 
 :root{
     font-size: 10px;
@@ -57,12 +68,13 @@ h3{
 {
     
     text-transform: uppercase;
-        margin: 4rem 0;
-        color : $blue;
+        margin-top: 2rem;
+        margin-bottom : 5rem;
         text-align: center;
         h2{
             display: inline-block;
             position: relative;
+            color : $primary-color;
             &::after{
                 content: "";
                 display: inline-block;
@@ -70,8 +82,8 @@ h3{
                 height: .2rem;
                 position: absolute;
                 top:45%;
-                right : -45%;
-                background : $secondary-color;
+                right : -107px;
+                background : $primary-color;
             }
 
             &::before{
@@ -81,8 +93,8 @@ h3{
                 height: .2rem;
                 position: absolute;
                 top:45%;
-                left : -45%;
-                background :  $secondary-color;
+                left : -107px;
+                background :  $primary-color;
             }
 
             .circle-left{
@@ -91,9 +103,9 @@ h3{
                 width : 1.8rem;
                 height: 1.8rem;
                 border-radius: 50%;
-                background : $secondary-color;
+                background : $primary-color;
                 top : 20%;
-                left : -45%;
+                left : -107px;
             }
 
             .circle-right{
@@ -102,14 +114,40 @@ h3{
                 width : 1.8rem;
                 height: 1.8rem;
                 border-radius: 50%;
-                background : $secondary-color;
+                background : $primary-color;
                 top : 20%;
-                right : -45%;
+                right : -107px;
                 z-index : 2;
             }
         }
        
        
+}
+
+
+//button
+
+.cbtn{
+    outline: none;
+    font-size: 1.6rem;
+    padding: .8rem 3rem;
+    color : #333;
+    text-transform: capitalize;
+    font-weight: 600;
+    background : $green;
+    border: 1px solid $green;
+    z-index: 6;
+    margin-top : 1rem;
+    transition: .4s;
+    &:hover{
+        background-color: transparent;
+        color : $green;
+
+        i{
+            color : $green;
+        }
+    }
+
 }
 
 

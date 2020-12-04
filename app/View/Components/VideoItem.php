@@ -23,6 +23,6 @@ class VideoItem extends Component
      */
     public function render()
     {
-        return view('components.video-item');
+        return view('public.components.video-item');
     }
 }

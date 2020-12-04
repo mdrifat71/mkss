@@ -1,0 +1,32 @@
+#about{
+    background : #333;
+    //background : $primary-color;
+
+    /*.heading{
+       h2{
+           color : $off-white;
+            &::after, &::before ,.circle-left, .circle-right{
+            background : $green; 
+        }
+       }
+    }
+    */
+    padding : 5rem;
+    color: $off-white;
+    .about-heading{
+        text-align: center;
+        color : $green;
+        text-transform: uppercase;
+        margin-bottom : 1.8rem;
+        letter-spacing: .2rem;
+    }
+    p{
+        font-weight: lighter;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    button{
+        margin-top:1.4rem;
+    }
+}

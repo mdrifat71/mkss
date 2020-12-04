@@ -23,6 +23,6 @@ class ProjectItem extends Component
      */
     public function render()
     {
-        return view('components.project-item');
+        return view('public.components.project-item');
     }
 }

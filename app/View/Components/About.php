@@ -23,6 +23,6 @@ class About extends Component
      */
     public function render()
     {
-        return view('components.about');
+        return view('public.components.about');
     }
 }
