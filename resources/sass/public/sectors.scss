@@ -1,17 +1,22 @@
 #sectors{
     background : $brown;
     padding:3rem 0;
-
+    transition: .3s;
+    
     .sectors-title{
         margin-bottom : 6rem;
         color : $primary-color;
     }
 
     .sectors-card{
+        
         .card{
             border-radius: 5px;
             box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
             border : 0 !important;
+
+            
+
             .card-img-container{
                  position: relative;
 

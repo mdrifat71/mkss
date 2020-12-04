@@ -11125,6 +11125,7 @@ header nav .nav-menu-container .project-menu {
 #sectors {
   background: #dedede9c;
   padding: 3rem 0;
+  transition: 0.3s;
 }
 
 #sectors .sectors-title {

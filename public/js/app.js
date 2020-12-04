@@ -19397,8 +19397,8 @@ console.log("hello");
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\rifat\Desktop\Laravel\MKSS\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\rifat\Desktop\Laravel\MKSS\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\rifat\Desktop\mkss\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\rifat\Desktop\mkss\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
