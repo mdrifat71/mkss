@@ -2,6 +2,7 @@
     <div class="card">
         <div class="card-img-top">
             <img src="{{asset('image/project/human.jpg')}}" alt="" class="img-fluid">
+            <div class="overlay-2"></div>
             <div class="tag">
                 <span><i class="fa fa-tag" aria-hidden="true"></i>humar rights</span>
             </div>

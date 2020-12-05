@@ -17,14 +17,14 @@
             }
 
             .card-header{
-                background-color: $green;
+                background-color: $primary-color;
                 height: .4rem !important;
                 padding : 0;
             }
             .card-footer{
                
-                background-color: $primary-color;
-                color : #fff;
+                background-color: $secondary-color;
+                color : $primary-color;
                 h3{
                     text-transform: uppercase;
                     text-align: center;

@@ -2,12 +2,14 @@
     margin-top : 8.4rem;
     background-color: $brown;
     font-family: $secondary-font;   
-
-
+    position: relative;
+    width: 100vw;
     .hero-img{
-        position: relative;
+        
+        width : 100vw;
         img{
-            width : 100vw;
+            width: 100%;
+            height: auto;
         }
     }
 
@@ -15,8 +17,8 @@
     .motto-container{
         z-index: 6;
         position: absolute;
-        top : 60%;
-        left : 55%;
+        top : 50%;
+        left : 50%;
         transform: translateX(-50%) translateY(-50%);
         h1{
             

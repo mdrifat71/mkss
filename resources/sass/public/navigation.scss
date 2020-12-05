@@ -6,8 +6,8 @@ header{
     z-index: 10;
     padding : 1rem;
     box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);;
-    background : $primary-color;
-    color : #fff;
+    background : #f3f3f3;
+
     .logo{
         width :  64px;
         height: 64px;
@@ -34,18 +34,21 @@ header{
             
 
             .nav-link{
-                color : $off-white;
+                padding-left : 0;
+                padding-right : 0;
+                color : #333;
                 font-size: 1.8rem;
-                margin-left: 1.5rem;
+                margin-left: 2rem;
                 cursor: pointer;
                 transition: .3s;
                 &:hover{
-                    color: $green;
+                    color:#888;
+                    
                 }
             }
 
             .project-menu{
-                border : 1px solid $green !important;
+                border : 1px solid #111 !important;
                 border-radius: 2px;
                 padding-left:2rem;
                 padding-right: 2rem;

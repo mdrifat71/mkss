@@ -10913,6 +10913,14 @@ bg : 2F2E41
 
 :root {
   font-size: 10px;
+}
+
+body {
+  max-width: 100vw;
+}
+
+body,
+p {
   font-family: "Maven Pro", sans-serif;
 }
 
@@ -10929,9 +10937,10 @@ h3 {
 }
 
 .active {
-  color: rgba(0, 255, 132, 0.871) !important;
+  color: #111 !important;
   position: relative;
-  border-bottom: 1.5px solid rgba(0, 255, 132, 0.871);
+  border-bottom: 2px solid #333;
+  font-weight: bold;
 }
 
 .active::before {
@@ -10954,7 +10963,7 @@ h3 {
 .heading h2 {
   display: inline-block;
   position: relative;
-  color: #05386b;
+  color: #444;
 }
 
 .heading h2::after {
@@ -10965,7 +10974,7 @@ h3 {
   position: absolute;
   top: 45%;
   right: -107px;
-  background: #05386b;
+  background: #444;
 }
 
 .heading h2::before {
@@ -10976,7 +10985,7 @@ h3 {
   position: absolute;
   top: 45%;
   left: -107px;
-  background: #05386b;
+  background: #444;
 }
 
 .heading h2 .circle-left {
@@ -10985,7 +10994,7 @@ h3 {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: #05386b;
+  background: #444;
   top: 20%;
   left: -107px;
 }
@@ -10996,7 +11005,7 @@ h3 {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: #05386b;
+  background: #444;
   top: 20%;
   right: -107px;
   z-index: 2;
@@ -11032,7 +11041,17 @@ h3 {
   top: 0;
   transition: 0.4s;
   z-index: 5;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transition: 0.4s;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 header {
@@ -11042,8 +11061,7 @@ header {
   z-index: 10;
   padding: 1rem;
   box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
-  background: #05386b;
-  color: #fff;
+  background: #f3f3f3;
 }
 
 header .logo {
@@ -11072,19 +11090,21 @@ header nav .nav-menu-container {
 }
 
 header nav .nav-menu-container .nav-link {
-  color: #f1faee;
+  padding-left: 0;
+  padding-right: 0;
+  color: #333;
   font-size: 1.8rem;
-  margin-left: 1.5rem;
+  margin-left: 2rem;
   cursor: pointer;
   transition: 0.3s;
 }
 
 header nav .nav-menu-container .nav-link:hover {
-  color: rgba(0, 255, 132, 0.871);
+  color: #888;
 }
 
 header nav .nav-menu-container .project-menu {
-  border: 1px solid rgba(0, 255, 132, 0.871) !important;
+  border: 1px solid #111 !important;
   border-radius: 2px;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -11095,21 +11115,24 @@ header nav .nav-menu-container .project-menu {
   margin-top: 8.4rem;
   background-color: #dedede9c;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+  width: 100vw;
 }
 
 #hero .hero-img {
-  position: relative;
+  width: 100vw;
 }
 
 #hero .hero-img img {
-  width: 100vw;
+  width: 100%;
+  height: auto;
 }
 
 #hero .motto-container {
   z-index: 6;
   position: absolute;
-  top: 60%;
-  left: 55%;
+  top: 50%;
+  left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -11163,14 +11186,14 @@ header nav .nav-menu-container .project-menu {
 }
 
 #sectors .sectors-card .card .card-header {
-  background-color: rgba(0, 255, 132, 0.871);
+  background-color: #f3f3f3;
   height: 0.4rem !important;
   padding: 0;
 }
 
 #sectors .sectors-card .card .card-footer {
-  background-color: #05386b;
-  color: #fff;
+  background-color: #444;
+  color: #f3f3f3;
 }
 
 #sectors .sectors-card .card .card-footer h3 {
@@ -11231,7 +11254,7 @@ header nav .nav-menu-container .project-menu {
 }
 
 #project {
-  padding: 5rem;
+  padding: 5rem 0;
   background-color: #dedede9c;
 }
 
@@ -11249,6 +11272,8 @@ header nav .nav-menu-container .project-menu {
 }
 
 #project .project-item .card .card-img-top .tag {
+  box-shadow: -6px 6px 8px rgba(255, 255, 255, 0.3);
+  z-index: 5;
   position: absolute;
   padding: 1rem 1.4rem;
   background: #444;
@@ -11316,7 +11341,7 @@ header nav .nav-menu-container .project-menu {
 
 #project .more .cbtn {
   background-color: #444;
-  color: rgba(0, 255, 132, 0.871);
+  color: #fff;
   border: none;
   height: 6rem;
   width: 6rem;
@@ -11324,8 +11349,7 @@ header nav .nav-menu-container .project-menu {
   padding-left: 2.4rem;
   border-radius: 50%;
   font-size: 1.8rem;
-  border: 2px solid rgba(0, 255, 132, 0.871);
-  box-shadow: 1px 0px 26px rgba(0, 255, 132, 0.871);
+  box-shadow: 1px 0px 26px #05386b;
 }
 
 #project .more .cbtn i {
@@ -11337,14 +11361,14 @@ header nav .nav-menu-container .project-menu {
 }
 
 #video {
-  padding: 3rem;
+  padding: 3rem 0;
   background: #444;
 }
 
 #video .video-item iframe {
   height: 20rem;
   width: 100%;
-  border: 1px solid rgba(0, 255, 132, 0.871);
+  border: 1px solid #fff;
   margin-bottom: 2rem;
 }
 
@@ -11357,5 +11381,147 @@ header nav .nav-menu-container .project-menu {
   margin-bottom: 3rem;
   font-size: 1.8rem;
   text-transform: uppercase;
+}
+
+#news {
+  padding: 5rem 0;
+  background: #dedede9c;
+}
+
+#news .news-item-container {
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+#news .news-item-container:hover {
+  transform: scale(1.1);
+}
+
+#news .news-item-container .card {
+  box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
+  border: 0;
+}
+
+#news .news-item-container .card .card-img-wraper {
+  position: relative;
+}
+
+#news .news-item-container .card .news-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
+#news .news-item-container .card .news-info a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #fff;
+          text-decoration-color: #fff;
+}
+
+#news .news-item-container .card .news-info a h3 {
+  color: #fff;
+}
+
+#news .news-item-container .card .news-info a h3:hover {
+  color: #dedede9c;
+}
+
+#news .news-item-container .card .news-category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 255, 132, 0.871);
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  color: #444;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border-radius: 0 0px 40px 0;
+}
+
+#news .news-item-container .card .news-category i {
+  margin-right: 0.5rem;
+}
+
+#news .more {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#news .more .cbtn {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  height: 6rem;
+  width: 6rem;
+  padding-top: 1rem;
+  padding-left: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  box-shadow: 1px 0px 26px #05386b;
+}
+
+#news .more .cbtn i {
+  transition: 0.4s;
+}
+
+#news .more .cbtn:hover i {
+  transform: translateX(0.4rem);
+}
+
+footer {
+  background: #444;
+  padding: 3rem 0;
+  color: #fff;
+}
+
+footer .f-block {
+  padding: 1rem 2rem 0 0;
+}
+
+footer .footer-title h3 {
+  text-transform: uppercase;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+footer .footer-contact p {
+  font-size: 1.4rem;
+  font-family: "Maven Pro", sans-serif !important;
+}
+
+footer .footer-contact p i {
+  margin-right: 1.5rem;
+}
+
+footer .footer-social .social-container {
+  display: flex;
+}
+
+footer .footer-social .social-container a {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: #dedede9c;
+  color: #f3f3f3;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-left: 14px;
+  margin-left: 1rem;
+  transition: 0.3s;
+}
+
+footer .footer-social .social-container a:hover {
+  color: #444;
+  background-color: #fff;
 }
 

@@ -57,20 +57,20 @@
             </div>
             <div class="project-container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 p">
+                    <div class="col-lg-4 col-md-6 col-sm-12 p project-item-container">
                         <x-project-item></x-project-item>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 project-item-container">
                         <x-project-item></x-project-item>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 project-item-container">
                         <x-project-item></x-project-item>
                     </div>
                 </div>
             </div>
             <div class="more">
                 <a href="">
-                    <button class="cbtn"><i class="fas fa-angle-double-right"></i></button>
+                    <button class="cbtn" title ="view more project"><i class="fas fa-angle-double-right"></i></button>
                 </a>
             </div>
         </div>
@@ -95,4 +95,44 @@
             </div>
         </div>
     </section>
+
+    <section id="news">
+        <div class="heading news-heading">
+            <h2>
+                news
+                <span class="circle-left"></span>
+                <span class="circle-right"></span>
+            </h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="news-item-container">
+                        <x-news-item></x-news-item>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="news-item-container">
+                        <x-news-item></x-news-item>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="news-item-container">
+                        <x-news-item></x-news-item>
+                    </div>
+                </div>
+            </div>
+
+            <div class="more">
+                <a href="">
+                    <button class="cbtn" title ="view more news"><i class="fas fa-angle-double-right"></i></button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <x-footer>
+       
+   </x-footer>
 @endsection

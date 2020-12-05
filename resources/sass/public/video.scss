@@ -1,12 +1,12 @@
 #video{
-    padding: 3rem;
+    padding: 3rem 0;
     background : $secondary-color;
     
     .video-item{
         iframe{
             height: 20rem;
             width: 100%;
-            border:1px solid $green;
+            border:1px solid #fff;
             margin-bottom: 2rem;
         }
     }
