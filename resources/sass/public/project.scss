@@ -1,104 +1,210 @@
 #project{
+    //project in home page
     padding:5rem 0;
-    background-color: $brown;
-    
- 
-    .project-item{
+     
+}
 
-        margin-bottom: 2.5rem;
-        .card{
-            box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
-            border : 0;
-            .card-img-top{
-                position: relative;
+#project-page{
+
+    //project-page
+    background : $primary-color;
+    padding: 3rem 0;
+
+    h2{
+        font-size: 2.4rem;
+    }
+
+    .project-page-sidebar-heading{
+        background : $secondary-color;
+        color : $primary-color;
+        font-weight: lighter;
+        padding:.8rem;
+        h2{
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2.2rem;
+        }
+    }
+    .project-page-side-bar{
+        display: flex;
+        flex-direction: column;
+        //background-color: $primary-color;
+        padding-top: 1.2rem;
+        border : 1px solid #EEEEEE;
         
-                .tag{
-                    box-shadow:-6px 6px 8px rgba(255, 255, 255, 0.3);
-                    z-index: 5;
-                    position: absolute;
-                    padding : 1rem 1.4rem;
-                    background : $secondary-color;
-                    top:-1rem;
-                    right:0;
-                    font-size: 1.4rem;
+         
+        a{
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            color : #444;
+            padding : 1rem;
+            border-bottom: 1px solid #eeeeee;
+            
+            i{
+                margin-right : 1rem;
+            }
+        }
+    }
+
+    .project-page-heading{
+        padding:.5rem;
+        border-bottom:2px solid $secondary-color;
+        margin-bottom: 3rem;
+
+        h2{
+            text-transform: uppercase;
+            color : #444;
+            
+           
+            i{
+                font-size: 2rem;
+                margin-right : 2rem;
+                
+                
+            }
+        }
+    }
+
+
+    //pagination
+
+    .project-pagination{
+        margin-top : 2rem;
+        font-size: 1.8rem;
+        a{
+            color : $secondary-color;
+        }
+        .active{
+            border : none;
+            background : $secondary-color;
+            color : $primary-color !important;
+        }
+    }
+}
+.project-item{
+
+    margin-bottom: 2.5rem;
+    .card{
+        box-shadow: $box-shadow;
+        border : 1px solid #eeeeee;
+        .card-img-top{
+            position: relative;
+    
+            .tag{
+               // box-shadow:-6px 6px 8px rgba(255, 255, 255, 0.3);
+                z-index: 5;
+                position: absolute;
+                padding : 1rem 1.4rem;
+                background : $secondary-color;
+                top:-1rem;
+                right: 0;
+                font-size: 1rem;
+                text-transform: uppercase;
+                color : $primary-color;
+                font-family: $primary-font;
+            }
+    
+            i{
+                margin-right : 1rem;
+                color :$primary-color;
+            }
+        }
+
+
+    
+        .card-footer{
+            padding : 1.5rem;
+            background : $primary-color;
+            color : $green;
+            
+            .project-status{
+                padding : .2rem 1.4rem;
+                border-radius: 4px;
+                display: inline-block;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+                text-transform: lowercase;
+            }
+
+            a{
+                text-decoration: none;
+                h3{
+                    margin:.7rem 0;
+                    font-size: 1.8rem;
+                    color : $secondary-color;
                     text-transform: uppercase;
-                    color : #fff;
-                    font-family: $primary-font;
+                    font-family: $secondary-font;
+                    font-weight: bold;
                 }
-        
+            }
+    
+            .project-duration{
+                font-size: 1rem;
+                color : $secondary-color;
                 i{
                     margin-right : 1rem;
-                    color :$green;
+                    color : $secondary-color;
+                    font-size: 1.3rem;
                 }
             }
-        
-            .card-footer{
-                padding : 1.5rem;
-                background : $secondary-color;
-                color : $green;
-                
-                a{
-                    text-decoration: none;
-                    h3{
-                        margin:.7rem 0;
-                        font-size: 1.6rem;
-                        color : $green;
-                        text-transform: uppercase;
-                    }
-                }
-        
-                .project-duration{
-                    font-size: 1rem;
-                    color : #fff;
-                    i{
-                        margin-right : 1rem;
-                        color : $green;
-                        font-size: 1.3rem;
-                    }
-                }
-        
-                .project-description{
-                    font-size: 1.4rem;
-                    color : #fff;
-                    font-family: $secondary-font;
-                }
-        
-                .cbtn{
-                    padding: .5rem 1.5rem;
-                    font-size: 1.2rem;
-                    margin:.7rem 0;
-                    i{
-                        margin-left: .8rem;
-                    }
-                }
+    
+            .project-description{
+                font-size: 1.4rem;
+                color : $secondary-color;
+                font-family: $secondary-font;
+               
             }
-        }
-    }
+    
+            .cbtn{
+                padding: .5rem 1.5rem;
+                font-size: 1.2rem;
+                margin:.7rem 0;
+                background: $secondary-color;
+                color : $primary-color;
+                border : 1px solid $secondary-color;
+                transition: .3s;
+                &:hover{
+                    color : $secondary-color;
+                    background-color: transparent;
 
-    .more{
-        text-align: center;
-        margin-top : 1rem;
-        .cbtn{
-            background-color: $secondary-color;
-            color: #fff;
-            border:none;
-            height: 6rem;
-            width: 6rem;
-            padding-top: 1rem;
-            padding-left:2.4rem;
-            border-radius: 50%;
-            font-size: 1.8rem;
-            //border:2px solid $primary-color;
-            box-shadow: 1px 0px 26px rgb(5, 56, 107);
-            i{
-                transition: .4s;
-            }
-            &:hover{
+                    i{
+                        color : $secondary-color;
+                        transform: translateX(5px);
+                        
+                    }
+                }
                 i{
-                    transform: translateX(.4rem);
+                    margin-left: .8rem;
+                    transition: transform .3s;
                 }
             }
         }
     }
+}
 
+
+.more{
+    text-align: center;
+    margin-top : 1rem;
+    .cbtn{
+        background-color: $secondary-color;
+        color: #fff;
+        border:none;
+        height: 6rem;
+        width: 6rem;
+        padding-top: 1rem;
+        padding-left:2.4rem;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        //border:2px solid $primary-color;
+        box-shadow: 1px 0px 26px rgb(5, 56, 107);
+        i{
+            transition: .4s;
+        }
+        &:hover{
+            i{
+                transform: translateX(.4rem);
+            }
+        }
+    }
 }

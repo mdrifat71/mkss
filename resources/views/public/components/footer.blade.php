@@ -36,5 +36,10 @@
                 </div>
             </div>
         </div>
+
+       
+    </div>
+    <div class="copy-right">
+        <p>&copy;2020 All right reserved to mkss</p>
     </div>
 </footer>

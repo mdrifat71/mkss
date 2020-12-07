@@ -10913,6 +10913,7 @@ bg : 2F2E41
 
 :root {
   font-size: 10px;
+  width: 100vw;
 }
 
 body {
@@ -10922,6 +10923,11 @@ body {
 body,
 p {
   font-family: "Maven Pro", sans-serif;
+}
+
+p {
+  margin: 0;
+  line-height: 2.3rem;
 }
 
 h1 {
@@ -10963,7 +10969,7 @@ h3 {
 .heading h2 {
   display: inline-block;
   position: relative;
-  color: #444;
+  color: #555;
 }
 
 .heading h2::after {
@@ -10974,7 +10980,7 @@ h3 {
   position: absolute;
   top: 45%;
   right: -107px;
-  background: #444;
+  background: #555;
 }
 
 .heading h2::before {
@@ -10985,7 +10991,7 @@ h3 {
   position: absolute;
   top: 45%;
   left: -107px;
-  background: #444;
+  background: #555;
 }
 
 .heading h2 .circle-left {
@@ -10994,7 +11000,7 @@ h3 {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: #444;
+  background: #555;
   top: 20%;
   left: -107px;
 }
@@ -11005,7 +11011,7 @@ h3 {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: #444;
+  background: #555;
   top: 20%;
   right: -107px;
   z-index: 2;
@@ -11051,17 +11057,22 @@ h3 {
   top: 0;
   transition: 0.4s;
   z-index: 5;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
 }
 
 header {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 10;
   padding: 1rem;
-  box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
-  background: #f3f3f3;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background: #fff;
 }
 
 header .logo {
@@ -11112,7 +11123,6 @@ header nav .nav-menu-container .project-menu {
 }
 
 #hero {
-  margin-top: 8.4rem;
   background-color: #dedede9c;
   font-family: "Montserrat", sans-serif;
   position: relative;
@@ -11170,7 +11180,6 @@ header nav .nav-menu-container .project-menu {
 }
 
 #sectors {
-  background: #dedede9c;
   padding: 3rem 0;
   transition: 0.3s;
 }
@@ -11186,14 +11195,14 @@ header nav .nav-menu-container .project-menu {
 }
 
 #sectors .sectors-card .card .card-header {
-  background-color: #f3f3f3;
+  background-color: #fff;
   height: 0.4rem !important;
   padding: 0;
 }
 
 #sectors .sectors-card .card .card-footer {
-  background-color: #444;
-  color: #f3f3f3;
+  background-color: #555;
+  color: #fff;
 }
 
 #sectors .sectors-card .card .card-footer h3 {
@@ -11255,92 +11264,188 @@ header nav .nav-menu-container .project-menu {
 
 #project {
   padding: 5rem 0;
-  background-color: #dedede9c;
 }
 
-#project .project-item {
+#project-page {
+  background: #fff;
+  padding: 3rem 0;
+}
+
+#project-page h2 {
+  font-size: 2.4rem;
+}
+
+#project-page .project-page-sidebar-heading {
+  background: #555;
+  color: #fff;
+  font-weight: lighter;
+  padding: 0.8rem;
+}
+
+#project-page .project-page-sidebar-heading h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+
+#project-page .project-page-side-bar {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.2rem;
+  border: 1px solid #EEEEEE;
+}
+
+#project-page .project-page-side-bar a {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 1rem;
+  border-bottom: 1px solid #eeeeee;
+}
+
+#project-page .project-page-side-bar a i {
+  margin-right: 1rem;
+}
+
+#project-page .project-page-heading {
+  padding: 0.5rem;
+  border-bottom: 2px solid #555;
+  margin-bottom: 3rem;
+}
+
+#project-page .project-page-heading h2 {
+  text-transform: uppercase;
+  color: #444;
+}
+
+#project-page .project-page-heading h2 i {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+#project-page .project-pagination {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+#project-page .project-pagination a {
+  color: #555;
+}
+
+#project-page .project-pagination .active {
+  border: none;
+  background: #555;
+  color: #fff !important;
+}
+
+.project-item {
   margin-bottom: 2.5rem;
 }
 
-#project .project-item .card {
-  box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
-  border: 0;
+.project-item .card {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border: 1px solid #eeeeee;
 }
 
-#project .project-item .card .card-img-top {
+.project-item .card .card-img-top {
   position: relative;
 }
 
-#project .project-item .card .card-img-top .tag {
-  box-shadow: -6px 6px 8px rgba(255, 255, 255, 0.3);
+.project-item .card .card-img-top .tag {
   z-index: 5;
   position: absolute;
   padding: 1rem 1.4rem;
-  background: #444;
+  background: #555;
   top: -1rem;
   right: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-transform: uppercase;
   color: #fff;
   font-family: "Maven Pro", sans-serif;
 }
 
-#project .project-item .card .card-img-top i {
+.project-item .card .card-img-top i {
   margin-right: 1rem;
-  color: rgba(0, 255, 132, 0.871);
+  color: #fff;
 }
 
-#project .project-item .card .card-footer {
+.project-item .card .card-footer {
   padding: 1.5rem;
-  background: #444;
+  background: #fff;
   color: rgba(0, 255, 132, 0.871);
 }
 
-#project .project-item .card .card-footer a {
+.project-item .card .card-footer .project-status {
+  padding: 0.2rem 1.4rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+}
+
+.project-item .card .card-footer a {
   text-decoration: none;
 }
 
-#project .project-item .card .card-footer a h3 {
+.project-item .card .card-footer a h3 {
   margin: 0.7rem 0;
-  font-size: 1.6rem;
-  color: rgba(0, 255, 132, 0.871);
+  font-size: 1.8rem;
+  color: #555;
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
-#project .project-item .card .card-footer .project-duration {
+.project-item .card .card-footer .project-duration {
   font-size: 1rem;
-  color: #fff;
+  color: #555;
 }
 
-#project .project-item .card .card-footer .project-duration i {
+.project-item .card .card-footer .project-duration i {
   margin-right: 1rem;
-  color: rgba(0, 255, 132, 0.871);
+  color: #555;
   font-size: 1.3rem;
 }
 
-#project .project-item .card .card-footer .project-description {
+.project-item .card .card-footer .project-description {
   font-size: 1.4rem;
-  color: #fff;
+  color: #555;
   font-family: "Montserrat", sans-serif;
 }
 
-#project .project-item .card .card-footer .cbtn {
+.project-item .card .card-footer .cbtn {
   padding: 0.5rem 1.5rem;
   font-size: 1.2rem;
   margin: 0.7rem 0;
+  background: #555;
+  color: #fff;
+  border: 1px solid #555;
+  transition: 0.3s;
 }
 
-#project .project-item .card .card-footer .cbtn i {
+.project-item .card .card-footer .cbtn:hover {
+  color: #555;
+  background-color: transparent;
+}
+
+.project-item .card .card-footer .cbtn:hover i {
+  color: #555;
+  transform: translateX(5px);
+}
+
+.project-item .card .card-footer .cbtn i {
   margin-left: 0.8rem;
+  transition: transform 0.3s;
 }
 
-#project .more {
+.more {
   text-align: center;
   margin-top: 1rem;
 }
 
-#project .more .cbtn {
-  background-color: #444;
+.more .cbtn {
+  background-color: #555;
   color: #fff;
   border: none;
   height: 6rem;
@@ -11352,17 +11457,17 @@ header nav .nav-menu-container .project-menu {
   box-shadow: 1px 0px 26px #05386b;
 }
 
-#project .more .cbtn i {
+.more .cbtn i {
   transition: 0.4s;
 }
 
-#project .more .cbtn:hover i {
+.more .cbtn:hover i {
   transform: translateX(0.4rem);
 }
 
 #video {
   padding: 3rem 0;
-  background: #444;
+  background: #555;
 }
 
 #video .video-item iframe {
@@ -11385,7 +11490,6 @@ header nav .nav-menu-container .project-menu {
 
 #news {
   padding: 5rem 0;
-  background: #dedede9c;
 }
 
 #news .news-item-container {
@@ -11393,12 +11497,8 @@ header nav .nav-menu-container .project-menu {
   transition: 0.3s;
 }
 
-#news .news-item-container:hover {
-  transform: scale(1.1);
-}
-
 #news .news-item-container .card {
-  box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border: 0;
 }
 
@@ -11407,16 +11507,8 @@ header nav .nav-menu-container .project-menu {
 }
 
 #news .news-item-container .card .news-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.6);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 #news .news-item-container .card .news-info a {
@@ -11426,25 +11518,25 @@ header nav .nav-menu-container .project-menu {
 }
 
 #news .news-item-container .card .news-info a h3 {
-  color: #fff;
+  color: #555;
+  font-size: 1.8rem;
 }
 
 #news .news-item-container .card .news-info a h3:hover {
-  color: #dedede9c;
+  color: #777;
 }
 
 #news .news-item-container .card .news-category {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 255, 132, 0.871);
-  padding: 0.8rem 2rem;
+  background-color: #007bff;
   font-size: 1.2rem;
-  color: #444;
-  text-transform: uppercase;
+  color: #fff;
+  text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  border-radius: 0 0px 40px 0;
+  border-radius: 40px 0px 40px 0;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.4rem 2rem;
 }
 
 #news .news-item-container .card .news-category i {
@@ -11457,7 +11549,7 @@ header nav .nav-menu-container .project-menu {
 }
 
 #news .more .cbtn {
-  background-color: #444;
+  background-color: #555;
   color: #fff;
   border: none;
   height: 6rem;
@@ -11478,13 +11570,13 @@ header nav .nav-menu-container .project-menu {
 }
 
 footer {
-  background: #444;
-  padding: 3rem 0;
+  background: #555;
+  padding-top: 3rem;
   color: #fff;
 }
 
 footer .f-block {
-  padding: 1rem 2rem 0 0;
+  margin-bottom: 1rem;
 }
 
 footer .footer-title h3 {
@@ -11497,6 +11589,7 @@ footer .footer-title h3 {
 footer .footer-contact p {
   font-size: 1.4rem;
   font-family: "Maven Pro", sans-serif !important;
+  margin-bottom: 0.8rem;
 }
 
 footer .footer-contact p i {
@@ -11512,7 +11605,7 @@ footer .footer-social .social-container a {
   width: 4rem;
   border-radius: 50%;
   background: #dedede9c;
-  color: #f3f3f3;
+  color: #fff;
   font-size: 14px;
   padding-top: 10px;
   padding-left: 14px;
@@ -11521,7 +11614,17 @@ footer .footer-social .social-container a {
 }
 
 footer .footer-social .social-container a:hover {
-  color: #444;
+  color: #555;
   background-color: #fff;
+}
+
+footer .copy-right {
+  padding: 0.7rem;
+  background: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #555;
+  margin-top: 1rem;
 }
 

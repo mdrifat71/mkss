@@ -12,9 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <style>
+        .running-project{
+            background : #28a745;
+            color : #fff;
+        }
         
-
-       
     </style>
      @yield('style')
 

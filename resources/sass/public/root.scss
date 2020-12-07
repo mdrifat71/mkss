@@ -8,8 +8,8 @@ brown : DEDEDE
 bg : 2F2E41
 */
 
-$primary-color:#f3f3f3;
-$secondary-color : #444;
+$primary-color:#fff;
+$secondary-color : #555;
 //$background : ;
 //$background-light : ;
 
@@ -32,7 +32,8 @@ $secondary-font : 'Montserrat', sans-serif;
 
 :root{
     font-size: 10px;
-    
+    width: 100vw;
+ 
 }
 body{
     max-width: 100vw;
@@ -40,6 +41,11 @@ body{
 }
 body,p{
     font-family: $primary-font;
+
+}
+p{
+    margin:0;
+    line-height: 2.3rem;
 }
 h1{
     font-size: 3.6rem;
@@ -179,6 +185,10 @@ h3{
     top: 0;
     transition: .4s;
     z-index: 5;
-    background: rgba(0, 0, 0,.3);
+    background: rgba(0, 0, 0,.1);
     
+}
+
+.box-shadow{
+    box-shadow: 0 3px 6px rgba(0,0,0,.14);
 }

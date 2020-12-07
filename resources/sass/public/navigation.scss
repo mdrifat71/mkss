@@ -1,12 +1,12 @@
 header{
-  
-    position: fixed;
+   
+    position: sticky;
     top : 0;
     width: 100%;
     z-index: 10;
     padding : 1rem;
-    box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);;
-    background : #f3f3f3;
+    box-shadow:$box-shadow;
+    background : $primary-color;
 
     .logo{
         width :  64px;
