@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', "Home@index");
-Route::get('/project', "Project@index");
-Route::get('/{name}', 'Home@test');
+Route::get('/', "HomeCon@index");
+Route::get('/project', "ProjectCon@index");
+Route::get('/news', 'NewsCon@index');

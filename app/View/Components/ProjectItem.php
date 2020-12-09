@@ -11,9 +11,24 @@ class ProjectItem extends Component
      *
      * @return void
      */
-    public function __construct()
+    public $title;
+    public $description;
+    public $sector;
+    public $from;
+    public$to;
+    public $status;
+    public $image;
+    public $url;
+    public function __construct($title, $description, $sector, $from, $to, $status, $image, $url)
     {
-        //
+        $this->title = $title;
+        $this->description = $description;
+        $this->sector = $sector;
+        $this->from = $from;
+        $this->to = $to;
+        $this->status = $status;
+        $this->image = $image;
+        $this->url = $url;
     }
 
     /**

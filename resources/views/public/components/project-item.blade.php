@@ -1,22 +1,22 @@
 <div class="project-item">
     <div class="card">
         <div class="card-img-top">
-            <img src="{{asset('image/project/human.jpg')}}" alt="" class="img-fluid">
+            <img src="{{asset("image/project/$image")}}" alt="" class="img-fluid">
             <div class="overlay-2"></div>
             <div class="tag">
-                <span><i class="fa fa-tag" aria-hidden="true"></i>humar rights</span>
+                <span>{{$sector}}</span>
             </div>
         </div>
         <div class="card-footer">
-            <div class="project-status running-project">active</div>
-            <div class="project-duration"><i class="fas fa-clock"></i>2016 - 2017</div>
+            <div class="project-status {{$status == 1 ? 'running-project' : 'archieved-project'}}">{{$status == 1 ? 'active' : 'archieved'}}</div>
+            <div class="project-duration"><i class="fas fa-clock"></i>{{$from}} - {{$to ?? 'running'}}</div>
             <a href="">
-                <h3 class="project-title">This is human rights</h3>
+                <h3 class="project-title">{{$title}}</h3>
             </a>
             <p class="project-description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus error laborum illum aliquam alias tempora. Repudiandae perferendis officia aliquid quibusdam.
+                {{$description}}
             </p>
-            <a href=""><button class="cbtn" >More<i class="fas fa-angle-double-right"></i></button></a>
+            <a href="/project/{{$url}}"><button class="cbtn" >More<i class="fas fa-angle-double-right"></i></button></a>
         </div>
     </div>
 </div>

@@ -1,7 +1,8 @@
 <div class="news-item">
     <div class="card">
+        <div class="card-header"></div>
         <div class="card-img-wraper">
-            <img src="{{asset('image/news/agriculture.jpg')}}" alt="" class="card-img-top img-fluid">
+            <img src="{{asset("image/news/$image")}}" alt="" class="card-img-top img-fluid">
         </div>
         
         
@@ -9,11 +10,11 @@
             <div class="news-info">
                 <span class="news-category">
                    
-                    uncategorised
+                    {{$category}}
                     
                 </span>
-                <a href="">
-                     <h3>This is news title Tjos os tote jhe llo how ar eyou</h3>
+                <a href="/{{$url}}">
+                     <h3>{{$title}}</h3>
                 </a>
              </div>
         </div>

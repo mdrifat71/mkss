@@ -2,52 +2,45 @@
 
 @section('main')
     <x-navigation :current="$current"></x-navigation>
-    <div id="project-page">
+    <div id="news-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 pr-5">
-                    <div class="project-page-sidebar-heading">
+                    <div class="news-page-sidebar-heading">
                         <h2>
-                            Sector
+                            Categories
                         </h2>
                     </div>
-                    <div class="project-page-side-bar"> 
-                        <a href="/project?si=all"><i class="fa fa-plus-square" aria-hidden="true"></i>All</a> 
-                        @foreach ($sectors as $sector)
-                        <a href="/project?si={{$sector->id}}"><i class="fa fa-plus-square" aria-hidden="true"></i>{{$sector->name}}</a>
-
+                    <div class="news-page-side-bar">  
+                        <a href="/news?ni=all"><i class="fa fa-tag" aria-hidden="true"></i>All</a>
+                        @foreach($category as $c)
+                            <a href="/news?ni={{$c->id}}"><i class="fa fa-tag" aria-hidden="true"></i>{{$c->name}}</a>
                         @endforeach
                         
-                       
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <div class="project-page-heading">
+                    <div class="news-page-heading">
                         <h2><i class="fas fa-project-diagram"></i>Project we have done</h2>
                     </div>
                     <div class="row">
-                        @foreach ($projects as $project)
+                        @foreach($news as $n)
                             @php
-                                
-                                $url = str_replace(" ", "-", $project->title); // create  url from $title
-                                $sector = $project->name;
-                                $title  = $project->title;
-                                $description = $project->description;
-                                $from = $project->from;
-                                $to = $project->to;
-                                $image = $project->image;
-                                $status = $project->status;
+                                $title = $n->title;
+                                $description = $n->description;
+                                $category = $n->category;
+                                $image = $n->image;   
                             @endphp
                             <div class="col-lg-4 col-md-6">
-                                <x-project-item :title="$title" :description="$description" :sector="$sector" :from="$from" :to="$to" :status="$status" :image="$image" :url="$url"></x-project-item>
+                                <x-news-item :title="$title" :description="$description" :category="$category" :image="$image"></x-news-item>
                             </div>
-                        @endforeach
+                       @endforeach
                     </div>
                     
                     <!--
                         bootstrap pagination
                     -->
-                    {{-- <div class="project-pagination">
+                    <div class="news-pagination">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center">
                               <li class="page-item disabled">
@@ -61,11 +54,12 @@
                               </li>
                             </ul>
                           </nav>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <x-footer></x-footer>
+
 @endsection

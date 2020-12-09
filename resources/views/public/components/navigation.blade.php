@@ -12,7 +12,8 @@
                <div class="nav-menu-container d-flex">
                   <a href="/" class="nav-link {{$current == 'home' ? 'active' : ''}} ">Home</a>
                   <a href="/governing-body" class="nav-link">Governing Body</a>
-                  <a href="/about-us" class="nav-link">About Us</a>
+                  <a href="/news" class="nav-link {{$current == 'news' ? 'active' : ''}}">News</a>
+                  <a href="/about-us" class="nav-link">About Us</a>      
                   <a href="/contact" class="nav-link">Contact</a>
                   <a href="/project" class="nav-link {{$current == 'project' ? 'active' : ''}} project-menu">Project</a>
                </div>

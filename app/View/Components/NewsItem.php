@@ -11,9 +11,30 @@ class NewsItem extends Component
      *
      * @return void
      */
-    public function __construct()
+
+    //title of news
+    public $title; 
+
+    //description of news
+    public $description;
+
+    //category of news
+    public $category;
+
+    //image name of news
+    public $image;
+
+
+    //url for specific news
+    public $url;
+
+    public function __construct($title, $description, $category, $image)
     {
-        //
+        $this->title = $title;
+        $this->description = $description;
+        $this->category = $category;
+        $this->image = $image;
+        $this->url = str_replace(" ", "-", $title);
     }
 
     /**

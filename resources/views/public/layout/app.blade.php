@@ -16,6 +16,11 @@
             background : #28a745;
             color : #fff;
         }
+
+        .archieved-project{
+            background : #6c757d;
+            color : #fff;
+        }
         
     </style>
      @yield('style')

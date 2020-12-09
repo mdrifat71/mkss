@@ -1,6 +1,9 @@
 @extends('public.layout.app')
 
 @section('main')
+    @php
+       
+    @endphp
     <x-navigation :current="$current"></x-navigation>
     <x-hero></x-hero>
     <section id="sectors">
@@ -57,15 +60,24 @@
             </div>
             <div class="project-container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 p project-item-container">
-                        <x-project-item></x-project-item>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 project-item-container">
-                        <x-project-item></x-project-item>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 project-item-container">
-                        <x-project-item></x-project-item>
-                    </div>
+                    
+                    @foreach ($projects as $project)
+                        @php
+                             
+                            $url = str_replace(" ", "-", $project->title); // create  url from $title
+                            $sector = $project->sector;
+                            $title  = $project->title;
+                            $description = $project->description;
+                            $from = $project->from;
+                            $to = $project->to;
+                            $image = $project->image;
+                            $status = $project->status;
+                        @endphp
+                        <div class="col-lg-4 col-md-6 col-sm-12 p project-item-container">
+                            <x-project-item :title="$title" :description="$description" :sector="$sector" :from="$from" :to="$to" :status="$status" :image="$image" :url="$url"></x-project-item>
+                        </div>
+                    @endforeach
+                    
                 </div>
             </div>
             <div class="more">
@@ -96,6 +108,8 @@
         </div>
     </section>
 
+
+{{-- News section start --}}
     <section id="news">
         <div class="heading news-heading">
             <h2>
@@ -107,30 +121,29 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                @foreach($news as $n)
+                    @php
+                        $title = $n->title;
+                        $description = $n->description;
+                        $image = $n->image;
+                        $category = $n->category;
+                    @endphp
+                   <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="news-item-container">
-                        <x-news-item></x-news-item>
+                        <x-news-item :title="$title" :description="$description" :image="$image" :category="$category"></x-news-item>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="news-item-container">
-                        <x-news-item></x-news-item>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="news-item-container">
-                        <x-news-item></x-news-item>
-                    </div>
-                </div>
+                @endforeach
             </div>
-
+            {{-- link to go to news page --}}
             <div class="more">
-                <a href="">
+                <a href="/news">
                     <button class="cbtn" title ="view more news"><i class="fas fa-angle-double-right"></i></button>
                 </a>
             </div>
         </div>
     </section>
+{{-- news section end --}}
 
    <x-footer>
        

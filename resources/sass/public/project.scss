@@ -15,7 +15,7 @@
     }
 
     .project-page-sidebar-heading{
-        background : $secondary-color;
+        background : #28A745;
         color : $primary-color;
         font-weight: lighter;
         padding:.8rem;
@@ -23,6 +23,7 @@
             text-align: center;
             text-transform: uppercase;
             font-size: 2.2rem;
+            margin : 0;
         }
     }
     .project-page-side-bar{
@@ -81,6 +82,9 @@
         }
     }
 }
+
+
+//single project item
 .project-item{
 
     margin-bottom: 2.5rem;
@@ -94,11 +98,11 @@
                // box-shadow:-6px 6px 8px rgba(255, 255, 255, 0.3);
                 z-index: 5;
                 position: absolute;
-                padding : 1rem 1.4rem;
-                background : $secondary-color;
+                padding : .8rem 1.4rem;
+                background : #007bff;
                 top:-1rem;
                 right: 0;
-                font-size: 1rem;
+                font-size: 1.4rem;
                 text-transform: uppercase;
                 color : $primary-color;
                 font-family: $primary-font;
