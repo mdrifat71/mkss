@@ -14,7 +14,7 @@
                     <div class="project-page-side-bar"> 
                         <a href="/project?si=all"><i class="fa fa-plus-square" aria-hidden="true"></i>All</a> 
                         @foreach ($sectors as $sector)
-                        <a href="/project?si={{$sector->id}}"><i class="fa fa-plus-square" aria-hidden="true"></i>{{$sector->name}}</a>
+                        <a href="/project?si={{$sector->id}}"><i class="fa fa-plus-square" aria-hidden="true"></i>{{$sector->name}} <span class="badge badge-dark">{{$sector->totalproject}}</span></a>
 
                         @endforeach
                         
@@ -26,22 +26,28 @@
                         <h2><i class="fas fa-project-diagram"></i>Project we have done</h2>
                     </div>
                     <div class="row">
-                        @foreach ($projects as $project)
-                            @php
-                                
-                                $url = str_replace(" ", "-", $project->title); // create  url from $title
-                                $sector = $project->name;
-                                $title  = $project->title;
-                                $description = $project->description;
-                                $from = $project->from;
-                                $to = $project->to;
-                                $image = $project->image;
-                                $status = $project->status;
-                            @endphp
-                            <div class="col-lg-4 col-md-6">
-                                <x-project-item :title="$title" :description="$description" :sector="$sector" :from="$from" :to="$to" :status="$status" :image="$image" :url="$url"></x-project-item>
+                        @if (count($projects) == 0)
+                            <div class="alert alert-danger no-project-alert">
+                                Sorry No Projects Found
                             </div>
-                        @endforeach
+                        @else
+                            @foreach ($projects as $project)
+                                @php
+                                    
+                                    $url = str_replace(" ", "-", $project->title); // create  url from $title
+                                    $sector = $project->name;
+                                    $title  = $project->title;
+                                    $description = $project->description;
+                                    $from = $project->from;
+                                    $to = $project->to;
+                                    $image = $project->image;
+                                    $status = $project->status;
+                                @endphp
+                                <div class="col-lg-4 col-md-6">
+                                    <x-project-item :title="$title" :description="$description" :sector="$sector" :from="$from" :to="$to" :status="$status" :image="$image" :url="$url"></x-project-item>
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
                     
                     <!--

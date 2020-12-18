@@ -30,9 +30,11 @@
                                 $description = $n->description;
                                 $category = $n->category;
                                 $image = $n->image;   
+                                $date = $n->created_at;
+                                $date = substr($date, 0, 10);
                             @endphp
                             <div class="col-lg-4 col-md-6">
-                                <x-news-item :title="$title" :description="$description" :category="$category" :image="$image"></x-news-item>
+                                <x-news-item :title="$title" :description="$description" :category="$category" :image="$image" :date="$date"></x-news-item>
                             </div>
                        @endforeach
                     </div>

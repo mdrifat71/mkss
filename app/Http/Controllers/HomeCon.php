@@ -26,11 +26,13 @@ class HomeCon extends Controller
             ->select("news.*","newscategory.name as category")
             ->orderByRaw("created_at desc")
             ->get();
-
+        
+        $sectors = DB::table("sectors")->get();
         $data = [
             "current" => "home",
             "projects" => $projects,
-            "news" => $news
+            "news" => $news,
+            "sectors" => $sectors
         ];
         return view("public.pages.home", $data);
     }

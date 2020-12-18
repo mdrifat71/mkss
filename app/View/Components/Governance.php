@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class About extends Component
+class Governance extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class About extends Component
      */
     public function render()
     {
-        return view('public.components.about');
+        return view('components.governance');
     }
 }

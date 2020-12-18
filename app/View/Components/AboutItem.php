@@ -4,19 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Sectors extends Component
+class AboutItem extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public $image;
-    public $name;
-    public function __construct($image, $name)
+
+    public function __construct()
     {
-        $this->image = $image;
-        $this->name = $name;
+
     }
 
     /**
@@ -26,6 +24,7 @@ class Sectors extends Component
      */
     public function render()
     {
-        return view('public.components.sectors');
+
+        return view('public.components.about-item');
     }
 }

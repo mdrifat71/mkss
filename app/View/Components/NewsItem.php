@@ -28,13 +28,18 @@ class NewsItem extends Component
     //url for specific news
     public $url;
 
-    public function __construct($title, $description, $category, $image)
+
+    public $date;
+
+    public function __construct($title, $description, $category, $image, $date ="")
     {
         $this->title = $title;
         $this->description = $description;
         $this->category = $category;
         $this->image = $image;
+        $this->date = $date;
         $this->url = str_replace(" ", "-", $title);
+       
     }
 
     /**

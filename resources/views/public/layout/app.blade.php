@@ -21,6 +21,11 @@
             background : #6c757d;
             color : #fff;
         }
+
+        .no-project-alert{
+            font-size: 1.5rem;
+            padding : 1rem 2rem;
+        }
         
     </style>
      @yield('style')

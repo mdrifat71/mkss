@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeCon@index");
 Route::get('/project', "ProjectCon@index");
 Route::get('/news', 'NewsCon@index');
+Route::get("/about-us","AboutCon@index");
+Route::get("/contact","ContactCon@index");
+Route::get("/governing-body","GovernanceCon@index");
+Route::get("project/{title}", "SingleProjectCon@index");

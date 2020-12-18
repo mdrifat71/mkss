@@ -92,60 +92,66 @@
 .news-item{
     .card{
         box-shadow: $box-shadow;
-        border : 2px solid #eeeeee;
         margin-bottom : 2rem;
 
 
         .card-img-wraper{
             position: relative;
         }
-    
         .card-header{
             background:$secondary-color;
             padding :.2rem;
+            
         }
         .card-footer{
             background: $brown;
-            
+            padding-bottom : 2rem;
         }
         .news-info{  
             padding-top : 1rem;   
             text-transform: capitalize;
             
             a{   
-                text-decoration: underline;
+               // text-decoration: underline;
                 text-decoration-color: $secondary-color;
                 h3{
+                    font-family: $secondary-font;
                     color : $secondary-color;    
                     font-size: 1.8rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
                     &:hover{
                         color : #777;
                     }
-                }
-                
-                
+                } 
             }
-        }
-    
-}
 
+            .news-category{
+                background-color: #007bff;
+                font-size : 1rem;
+                color : $primary-color;
+                text-transform: capitalize;
+                font-family: $secondary-font;
+               
+                border-radius: 1rem;
+                margin-bottom : 1rem;
+                display: inline-block;
+                padding : .5rem 2rem;
+                i{
+                    margin-right : .5rem;
+                }
+            }
+        
+            .date{
+                margin-bottom: .4rem;
+                font-size : 1.2rem;
+            }
 
-
-    .news-category{
-        background-color: #007bff;
-        font-size : 1.2rem;
-        color : $primary-color;
-        text-transform: capitalize;
-        font-family: $secondary-font;
-        font-weight: bold;
-        border-radius: 40px 0px 40px 0;
-        margin-bottom : 1rem;
-        display: inline-block;
-        padding : .4rem 2rem;
-        i{
-            margin-right : .5rem;
         }
     }
+
+
+    
 }
 
 

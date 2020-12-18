@@ -18,26 +18,15 @@
             </div>
             <div class="sectors-body">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12  sectors-container">
-                        <x-sectors img="agriculture.jpg" title="Agriculture"></x-sectors>
-                        <a href="#" class="sectors-link"></a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12  sectors-container">
-                        <x-sectors img="human.jpg" title="Human rights"></x-sectors>
-                        <a href="#" class="sectors-link"></a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12  sectors-container">
-                        <x-sectors img="health.jpg" title="Public Health"></x-sectors>
-                        <a href="#" class="sectors-link"></a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12  sectors-container">
-                        <x-sectors img="education.jpg" title="Education"></x-sectors>
-                        <a href="#" class="sectors-link"></a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12  sectors-container">
-                        <x-sectors img="relief.jpg" title="Relief Operation"></x-sectors>
-                        <a href="#" class="sectors-link"></a>
-                    </div>
+                    
+                    @foreach ($sectors as $sector)
+
+                        <div class="col-lg-4 col-md-6 col-sm-12  sectors-container">
+                            <x-sectors :image="$sector->image" :name="$sector->name"></x-sectors>
+                            <a href="/project?si={{$sector->id}}" class="sectors-link"></a>
+                        </div>
+                    @endforeach
+                    
                     
                 </div>
             </div>
@@ -45,7 +34,7 @@
     </section>
 
     <section id="about" class="">
-        <x-about></x-about>
+        <x-about-item></x-about-item>
     </section>
 
     <section id="project">
@@ -127,10 +116,12 @@
                         $description = $n->description;
                         $image = $n->image;
                         $category = $n->category;
+                        $date = $n->created_at;
+                        $date = substr($date, 0, 10);
                     @endphp
                    <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="news-item-container">
-                        <x-news-item :title="$title" :description="$description" :image="$image" :category="$category"></x-news-item>
+                        <x-news-item :title="$title" :description="$description" :image="$image" :category="$category" :date="$date"></x-news-item>
                     </div>
                 </div>
                 @endforeach

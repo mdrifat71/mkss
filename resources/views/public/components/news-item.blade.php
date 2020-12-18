@@ -13,6 +13,10 @@
                     {{$category}}
                     
                 </span>
+                <div class="date">
+                    <i class="fa fa-calendar-alt"></i>
+                    {{$date}}
+                </div>
                 <a href="/{{$url}}">
                      <h3>{{$title}}</h3>
                 </a>
