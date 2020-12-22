@@ -1,0 +1,38 @@
+@mixin responsive($break) {
+    @if $break == desktop
+    {
+        @media only screen and (min-width : 980px)
+        {
+            @content
+        };
+    }
+
+    @if $break == tab-big
+    {
+        @media only screen and (max-width : 990px)
+        {
+            @content
+        };
+    }
+
+    @if $break == tab
+    {
+        @media only screen and (max-width : 768px)
+        {
+            @content
+        };
+    }
+
+   
+   
+
+    @if $break == mobile{
+        @media only screen and (max-width : 560px)
+        {
+            @content
+        };
+    }
+
+    
+    
+}

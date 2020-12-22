@@ -1,7 +1,7 @@
 #video{
     padding: 3rem 0;
-    background : $secondary-color;
-    
+    background : $brown;
+    margin-top : 3rem;
     .video-item{
         iframe{
             height: 20rem;
@@ -15,7 +15,7 @@
         text-align: center;
 
         h2{
-            color : $green;
+            color : $secondary-color;
             margin-bottom: 3rem;
             font-size: 1.8rem;
             text-transform: uppercase;

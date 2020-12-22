@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 class SingleProjectCon extends Controller
 {
     //
@@ -27,6 +28,8 @@ class SingleProjectCon extends Controller
         // print_r($project);
         // echo "</pre>";
 
+        if (empty($project))
+            return redirect("/404");
         return view("public.pages.single-project", $data);
 
     }

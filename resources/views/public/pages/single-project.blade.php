@@ -1,4 +1,4 @@
-@extends("public.layout.app")
+@extends("public.layout.app", ["page_title" => str_replace("-", " ", $project->title)])
 
 @section("main")
 
@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="single-project">
-        <div class="col-lg-9">
+        <div class="col-lg-9 single-project-inner-container">
             <div class="single-project-title">
                 <h1>{{$project->title}}</h1>
             </div>

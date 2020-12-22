@@ -3,6 +3,7 @@
     font-family: $secondary-font;   
     position: relative;
     width: 100vw;
+    overflow: hidden;
     .hero-img{
         
         width : 100vw;
@@ -21,31 +22,37 @@
         transform: translateX(-50%) translateY(-50%);
         h1{
             
-            color : rgba(0, 255, 132, 1);
+            color : $primary-color;
             text-transform: uppercase;
             font-weight: bold;
+
+            @include responsive (mobile)
+            {
+                font-size : 2rem;
+            }
+
+          
         }
 
         .explore-btn{
+            @include responsive (mobile)
+            {
+                display: none;
+                
+            }
+            
             outline: none;
             font-size: 1.6rem;
             padding: .8rem 3rem;
-            color : #333;
+            color : $primary-color;
             text-transform: capitalize;
             font-weight: 600;
-            background : $green;
-            border: 1px solid $green;
+            background : transparent;
+            border: 1px solid $primary-color;
             z-index: 6;
             margin-top : 1rem;
             transition: .4s;
-            &:hover{
-                background-color: transparent;
-                color : $green;
-
-                i{
-                    color : $green;
-                }
-            }
+           
             i{
                 margin-left : 1rem;
             }

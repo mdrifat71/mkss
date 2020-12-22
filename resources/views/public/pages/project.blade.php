@@ -5,7 +5,7 @@
     <div id="project-page">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 pr-5">
+                <div class="col-lg-3 pr-5 project-page-sidebar">
                     <div class="project-page-sidebar-heading">
                         <h2>
                             Sector
@@ -27,7 +27,7 @@
                     </div>
                     <div class="row">
                         @if (count($projects) == 0)
-                            <div class="alert alert-danger no-project-alert">
+                            <div class="alert alert-danger ml-4 mb-5 no-project-alert">
                                 Sorry No Projects Found
                             </div>
                         @else

@@ -1,4 +1,4 @@
-.single-project{
+.single-news{
 
     
     padding: 3rem 0;
@@ -13,19 +13,8 @@
         margin-bottom : .5rem;
     }
 
-    &-duration{
-        font-size : 1rem;
-        margin-bottom : 0rem;
-        p{
-            font-family: $secondary-font;
-
-            i{
-                margin-right:1rem;
-            }
-        }
-    }
-
-    &-sector{
+    
+    &-category{
         p{
             font-size : 1.2rem;
             margin-top : 1rem;
@@ -39,26 +28,28 @@
         
     }
 
-    .project-status{
-        padding : .2rem 1.4rem;
-        border-radius: 4px;
-        display: inline-block;
-        font-size: 1.2rem;
-        text-transform: lowercase;
-    }
-
+   
     &-description{
         font-size : 1.8rem;
     }
 
-    &-working-zone{
-        font-size: 1.5rem;
-        margin-top : .5rem;
+    &-date{
+        font-size: 1.4rem;
 
-        text-transform: uppercase;
+        i{
+            margin-right: .4rem;
+        }
     }
 
-    .single-project-inner-container
+    .image-caption{
+        background : $brown;
+        text-align: center;
+        font-size: 1.4rem;
+        padding : .7rem;
+        font-style: italic;
+    }
+
+    .single-news-inner-container
     {
         @include responsive(tab)
         {

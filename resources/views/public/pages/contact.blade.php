@@ -8,9 +8,7 @@
 
                 {{-- Contact form start --}}
                 <div class="col-lg-8 col">
-                    <div class="contact-us-heading">
-                        <h2><i class="fa fa-envelope"></i> Contact Us</h2>
-                    </div>
+                    
                     <div class="contact-form">
                         <form action="/contact" method="post" id="contact-form">
                             <div class="form-group">
@@ -37,9 +35,21 @@
 
                 {{--  address start --}}
                 <div class="col-lg-4">
+                    <div class="contact-us-heading">
+                        <h2><i class="fa fa-envelope"></i> Contact Us</h2>
+                    </div>
                     <div class="contact-page-address">
-                        <div class="contact-page-address-heading">
-                            <h2><i class="fa fa-location-arrow"></i> Address</h2>
+                        <div class="location">
+                            <p><i class="fas fa-map-marker-alt mb-3"></i> <b>Head Office</b></p>
+                            <div class="contact-us-body pl-4">
+                                <p class=""><b>Village</b> : Kazibari Sontola</p>
+                                <p><b>Post</b>: Sadullapur</p>
+                                <p><b>Upazila</b>: Sadullapur</p>
+                                <p class="mb-4"><b>District</b> : Gaibandha</p>
+                                <p><i class="fa fa-phone"></i>01716875283</p>
+                                <p><i class="fa fa-envelope"></i>mkssgaibandha@yahoo.com</p>
+                            </div>
+                           
                         </div>
 
                     </div>

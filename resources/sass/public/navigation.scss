@@ -7,28 +7,65 @@ header{
     padding : 1rem;
     box-shadow:$box-shadow;
     background : $primary-color;
+   
+    .logo-container
+    {
+        overflow: hidden;
+        a{
+            text-decoration: none;
+            color: $secondary-color;
+        }
 
+        @include responsive(mobile)
+        {
+            width : 50vw !important;
+        }
+    }
     .logo{
+        
         width :  64px;
         height: 64px;
+       
         
         img{
             width:100%;
             height: 100%;
+
+            @include responsive (tab-big)
+            {
+                width : 90%;
+                height: 90%;
+            }
         }
 
         .logo-text{
             font-size: 2.5rem;
-            margin: 1rem 1.8rem;
+            margin: 1.1rem 1.5rem;
         }
     }
 
     
     nav{
-
+         //responsive
+        @include responsive(tab-big)
+        {
+            height: 0;
+        }
         font-family: $primary-font;
         padding-top:1rem;
+        overflow: hidden;
+        transition: .1s;
         .nav-menu-container{
+            @include responsive (tab-big)
+            {
+               flex-direction: column;
+               justify-content: center;
+               text-align: center;
+                overflow: hidden;
+               .active{
+                   border : 0;
+               }
+            }
             display: flex;
             justify-content: flex-end;
             
@@ -56,5 +93,31 @@ header{
             }
         }
         
+        
+
+       
     }
+
+    .navigation-container{
+
+        @include responsive (tab-big){
+            text-align: right;
+        }
+
+
+        .hamburger{
+            position: absolute;
+            display: inline-block;
+            font-size: 2.5rem;
+            top: - 6rem;
+            right: 1rem;
+            cursor : pointer;
+            
+            @include responsive(desktop)
+            {
+                display: none;
+            }
+        }
+    }
+
 }

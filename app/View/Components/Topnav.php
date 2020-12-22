@@ -4,37 +4,29 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\DB;
-class Footer extends Component
+class Topnav extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public $primary_mobile;
-    public $primary_email;
-    public $primary_location;
-
+    public $mobile;
+    public $email;
     public function __construct()
     {
-       
-        $this->primary_email  = DB::table("siteinfo")
-        ->where("key","primary-email")
-        ->get()
-        ->first()
-        ->content;
-
-        $this->primary_mobile= DB::table("siteinfo")
+        $this->mobile = DB::table("siteinfo")
         ->where("key","primary-mobile")
         ->get()
         ->first()
         ->content;
 
-        $this->primary_location  = DB::table("siteinfo")
-        ->where("key","primary-location")
+        $this->email  = DB::table("siteinfo")
+        ->where("key","primary-email")
         ->get()
         ->first()
         ->content;
+         
     }
 
     /**
@@ -44,6 +36,6 @@ class Footer extends Component
      */
     public function render()
     {
-        return view('public.components.footer');
+        return view('public.components.top-nav');
     }
 }

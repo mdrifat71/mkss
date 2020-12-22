@@ -5,7 +5,7 @@
     <div id="news-page">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 pr-5">
+                <div class="col-lg-3 pr-5 news-page-sidebar-container">
                     <div class="news-page-sidebar-heading">
                         <h2>
                             Categories
@@ -42,17 +42,22 @@
                     <!--
                         bootstrap pagination
                     -->
+                    @php
+                        $next = $page+1;
+                        $prev = $page-1;  
+                    @endphp
                     <div class="news-pagination">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center">
-                              <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                              <li class="page-item {{$prev == 0 ? "disabled" : ""}}">
+                                <a class="page-link" href="{{"?p=$prev&ni=$news_id"}}" tabindex="-1">Previous</a>
                               </li>
-                              <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                              <li class="page-item"><a class="page-link" href="#">2</a></li>
-                              <li class="page-item"><a class="page-link" href="#">3</a></li>
-                              <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
+                              
+                              @for ($i = 1; $i <= $total_page; $i++)
+                                <li class="page-item"><a class="page-link {{$page == $i ? "active" : ""}}" href="{{"?p=$i&ni=$news_id"}}">{{$i}}</a></li>
+                              @endfor
+                              <li class="page-item {{$next > $total_page ? "disabled" : ""}}">
+                                <a class="page-link" href="{{"?p=$next&ni=$news_id"}}">Next</a>
                               </li>
                             </ul>
                           </nav>

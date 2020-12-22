@@ -1,13 +1,12 @@
 #sectors{
-    padding:3rem 0;
     transition: .3s;
-    
+    overflow: hidden;
 
     .sectors-card{
         
         .card{
             border-radius: 5px;
-            box-shadow: 2px 18px 20px rgba(0, 0, 0, 0.4);
+            box-shadow:$box-shadow;
             border : 0 !important;
             
             .card-img-container{
@@ -40,7 +39,7 @@
 
     .sectors-container{
         position: relative;
-        padding : 2rem;
+        margin-bottom : 2rem;
         
         .sectors-link{
             position: absolute;

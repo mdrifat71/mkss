@@ -1,9 +1,10 @@
-@extends('public.layout.app')
+@extends('public.layout.app', ["page_title" => "MKSS-Manob Kollan Sabolombi Sangstha"])
 
 @section('main')
     @php
        
     @endphp
+    <x-top-nav></x-top-nav>
     <x-navigation :current="$current"></x-navigation>
     <x-hero></x-hero>
     <section id="sectors">
@@ -70,7 +71,7 @@
                 </div>
             </div>
             <div class="more">
-                <a href="">
+                <a href="/project">
                     <button class="cbtn" title ="view more project"><i class="fas fa-angle-double-right"></i></button>
                 </a>
             </div>

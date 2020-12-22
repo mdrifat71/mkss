@@ -13,9 +13,7 @@
             <a href="">
                 <h3 class="project-title">{{$title}}</h3>
             </a>
-            <p class="project-description">
-                {{$description}}
-            </p>
+            
             <a href="/project/{{$url}}"><button class="cbtn" >More<i class="fas fa-angle-double-right"></i></button></a>
         </div>
     </div>

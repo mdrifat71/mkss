@@ -12,7 +12,7 @@
                 <h2 class="about-heading">lets make the change together</h2>
                 <p class="about-text">Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda odit repellendus asperiores officia eius accusamus error saepe modi magnam ut. ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo sed saepe dignissimos in, voluptatum excepturi fugit suscipit illum a.</p>
                 <div class="text-center">
-                    <button class="joinus-btn cbtn">join us</button>
+                    <a href="/about-us"><button class="joinus-btn cbtn">About Us</button></a>
                 </div>
             </div>
         </div>

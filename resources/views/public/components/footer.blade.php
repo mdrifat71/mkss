@@ -6,9 +6,9 @@
                     <h3 class="footer-contact-title">
                         contact
                     </h3>
-                    <p class="phone"><i class="fa fa-phone-alt"></i>+8801990059129</p>
-                    <p class="email"><i class="fa fa-envelope"></i>rifatsarker71@gmail.com</p>
-                    <p class="address"><i class="fa fa-location-arrow"></i>Sector-7, Uttora, Dhaka, Bangladesh</p>
+                    <p class="phone"><i class="fa fa-phone-alt"></i>{{$primary_mobile}}</p>
+                    <p class="email"><i class="fa fa-envelope"></i>{{$primary_email}}</p>
+                    <p class="address"><i class="fa fa-location-arrow"></i>{{$primary_location}}</p>
                     <p class="address"><i class="fa fa-location-arrow"></i>Sadullapur, Gaibandha</p>
                 </div>
             </div>

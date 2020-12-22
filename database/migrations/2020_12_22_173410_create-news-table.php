@@ -17,10 +17,11 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->string("title",100);
             $table->unsignedBigInteger("newscategoryid");
-            $table->string("description",1000);
+            $table->string("description",15000);
             $table->string("image", 50);
             $table->timestamps();
             $table->foreign("newscategoryid")->references("id")->on("newscategory");
+            $table->string("imagecaption",200);
         });
     }
 
@@ -31,6 +32,6 @@ class CreateNewsTable extends Migration
      */
     public function down()
     {
-        //
+        //Schema::dropIfExists("news");
     }
 }

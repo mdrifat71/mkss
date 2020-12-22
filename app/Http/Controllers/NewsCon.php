@@ -9,6 +9,14 @@ class NewsCon extends Controller
     
     public function index()
     {
+        $offset = 0;
+        $limit = 1;
+        $page = 1;
+        if (isset($_GET['p']))
+        {
+            $page = $_GET['p'];
+            $offset = ($page - 1) * $limit;
+        }
         $ni = "all";
         if (isset($_GET['ni']) && $_GET['ni'] != 'all')
         {
@@ -18,7 +26,13 @@ class NewsCon extends Controller
             ->select("news.*","newscategory.name as category")
             ->where("newscategoryid", $ni)
             ->orderByRaw("created_at desc")
+            ->offset($offset)
+            ->limit($limit)
             ->get();
+
+            $total_news = DB::table("news")
+            ->where("newscategoryid", $ni)
+            ->count();
         }
         else
         {
@@ -27,9 +41,18 @@ class NewsCon extends Controller
             ->join("newscategory","news.newscategoryid","newscategory.id")
             ->select("news.*","newscategory.name as category")
             ->orderByRaw("created_at desc")
+            ->offset($offset)
+            ->limit($limit)
             ->get();
+
+            $total_news  = DB::table("news")
+            ->count();
+
         }
 
+        $total_page = ceil($total_news/$limit);
+        
+        
        
         $category = DB::table("newscategory")
         ->get();
@@ -37,7 +60,10 @@ class NewsCon extends Controller
         $data = [
             "current" => "news",
             "news" => $news,
-            "category"=>$category
+            "category"=>$category,
+            "total_page" =>$total_page,
+            "news_id" => $ni,
+            "page" => $page
         ];
         return view("public.pages.news", $data);
     }

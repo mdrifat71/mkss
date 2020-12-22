@@ -22,7 +22,7 @@ class ProjectItem extends Component
     public function __construct($title, $description, $sector, $from, $to, $status, $image, $url)
     {
         $this->title = $title;
-        $this->description = $description;
+        $this->description = substr($description,0,200);
         $this->sector = $sector;
         $this->from = $from;
         $this->to = $to;

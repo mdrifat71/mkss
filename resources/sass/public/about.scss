@@ -1,21 +1,11 @@
 #about{
-    background : #333;
-    //background : $primary-color;
-
-    /*.heading{
-       h2{
-           color : $off-white;
-            &::after, &::before ,.circle-left, .circle-right{
-            background : $green; 
-        }
-       }
-    }
-    */
+    background : $brown;
+    margin-top : 2rem;
     padding : 5rem;
-    color: $off-white;
+    color: $secondary-color;
     .about-heading{
         text-align: center;
-        color : $green;
+        color :$secondary-color;
         text-transform: uppercase;
         margin-bottom : 1.8rem;
         letter-spacing: .2rem;
@@ -28,5 +18,25 @@
 
     button{
         margin-top:1.4rem;
+    }
+}
+
+#about-us-page{
+
+    padding : 2rem 0;
+    .x{
+        margin-bottom : 2rem;
+    }
+    h2{
+        margin-bottom: 1rem;
+        padding-bottom : 1rem;
+        border-bottom : 1px solid $secondary-color;
+
+        i{
+            margin-right: 1rem;
+        }
+    }
+    .description{
+        font-size : 1.8rem;
     }
 }

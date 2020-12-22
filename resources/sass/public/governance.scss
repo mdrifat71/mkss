@@ -1,0 +1,42 @@
+#governing-body{
+
+    
+    padding : 3rem 0;
+    p{
+        font-size : 1.5rem;
+    }
+    hr{
+        margin-top : 3rem;
+        margin-bottom : 3rem;
+    }
+    .profile{
+       
+        img{
+            border : 1px solid $secondary-color;
+        }
+
+        .name{
+            text-transform: uppercase;
+            margin-top: .7rem;
+        }
+
+        .designation{
+            margin-bottom : 1rem;
+            font-size: 1.3rem;
+        }
+
+        .name, .designation{
+            line-height: 1.5rem;
+        }
+
+        .description{
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+        }
+
+        .email{
+            margin-bottom : 1rem
+        }
+    }
+
+}

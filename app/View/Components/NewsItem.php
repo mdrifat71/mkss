@@ -34,7 +34,7 @@ class NewsItem extends Component
     public function __construct($title, $description, $category, $image, $date ="")
     {
         $this->title = $title;
-        $this->description = $description;
+        $this->description = substr($description,100);
         $this->category = $category;
         $this->image = $image;
         $this->date = $date;
