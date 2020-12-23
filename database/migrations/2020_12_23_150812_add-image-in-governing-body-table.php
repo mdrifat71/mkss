@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAboutUsTable extends Migration
+class AddImageInGoverningBodyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateAboutUsTable extends Migration
      */
     public function up()
     {
-        Schema::create("aboutus", function(Blueprint $table){
-            $table->string("heading",100);
-            $table->string("content", 15000);
-            $table->integer("priority");
+        Schema::table("governingbody", function(Blueprint $table){
+            $table->string("image", 128);
         });
     }
 
@@ -27,6 +25,6 @@ class CreateAboutUsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aboutus');
+        //
     }
 }

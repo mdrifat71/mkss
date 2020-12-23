@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="news-page-heading">
-                        <h2><i class="fas fa-project-diagram"></i>Project we have done</h2>
+                        <h2><i class="fas fa-project-diagram"></i>News</h2>
                     </div>
                     <div class="row">
                         @foreach($news as $n)
