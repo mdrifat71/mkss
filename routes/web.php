@@ -21,5 +21,7 @@ Route::get("/contact","ContactCon@index");
 Route::get("/governing-body","GovernanceCon@index");
 Route::get("project/{title}", "SingleProjectCon@index");
 Route::get("/404", "NotFound@index");
+Route::get("test", function(){
 
+});
 Route::get("/{title}", "SingleNewsCon@index");
