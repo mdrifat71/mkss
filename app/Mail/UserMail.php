@@ -29,6 +29,6 @@ class UserMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("MKSS::New Message From User")->view('Mail.usermail');
+        return $this->subject("MKSS::New Message From User")->view('mail.usermail');
     }
 }
