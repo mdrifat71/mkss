@@ -10,7 +10,7 @@ class NewsCon extends Controller
     public function index()
     {
         $offset = 0;
-        $limit = 1;
+        $limit = 10;
         $page = 1;
         if (isset($_GET['p']))
         {

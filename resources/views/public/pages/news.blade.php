@@ -1,11 +1,11 @@
-@extends('public.layout.app')
+@extends('public.layout.app', ["page_title"=> "News | MKSS"])
 
 @section('main')
     <x-navigation :current="$current"></x-navigation>
     <div id="news-page">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 pr-5 news-page-sidebar-container">
+                <aside class="col-lg-3 pr-5 news-page-sidebar-container">
                     <div class="news-page-sidebar-heading">
                         <h2>
                             Categories
@@ -18,23 +18,23 @@
                         @endforeach
                         
                     </div>
-                </div>
+                </aside>
                 <div class="col-lg-9">
                     <div class="news-page-heading">
-                        <h2><i class="fas fa-project-diagram"></i>News</h2>
+                        <h2><i class="far fa-newspaper" style="font-size : 3rem"></i>News</h2>
                     </div>
                     <div class="row">
                         @foreach($news as $n)
                             @php
                                 $title = $n->title;
-                                $description = $n->description;
+                                
                                 $category = $n->category;
                                 $image = $n->image;   
                                 $date = $n->created_at;
                                 $date = substr($date, 0, 10);
                             @endphp
                             <div class="col-lg-4 col-md-6">
-                                <x-news-item :title="$title" :description="$description" :category="$category" :image="$image" :date="$date"></x-news-item>
+                                <x-news-item :title="$title"  :category="$category" :image="$image" :date="$date"></x-news-item>
                             </div>
                        @endforeach
                     </div>

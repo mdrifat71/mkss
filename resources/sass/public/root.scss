@@ -1,5 +1,3 @@
-
-
 /*
 primary-color :#0CA750
 lik-primary : #17C856 , 419174
@@ -8,8 +6,8 @@ brown : DEDEDE
 bg : 2F2E41
 */
 
-$primary-color:#fff;
-$secondary-color : #555;
+$primary-color: #fff;
+$secondary-color: #555;
 //$background : ;
 //$background-light : ;
 
@@ -18,218 +16,193 @@ $secondary-color : #555;
 // $background : ;
 // $background-light : ;
 
+$off-white: #f1faee;
+$blue: #1d3557;
+$green: rgba(0, 255, 132, 0.871);
+$dark-green: #19a762de;
+$brown: #dedede9c;
 
-$off-white : #f1faee;
-$blue : #1d3557;
-$green : rgba(0, 255, 132, 0.871);
-$dark-green : #19a762de;
-$brown : #dedede9c;
+$primary-font: "Maven Pro", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
 
-$primary-font : 'Maven Pro', sans-serif;
-$secondary-font : 'Montserrat', sans-serif;
-
-
-
-:root{
+:root {
     scroll-behavior: smooth;
     font-size: 62.5%;
     width: 100vw;
     max-width: 100vw;
 
-    @include responsive(tab)
-    {
-        font-size : 56.25%;
-        
+    @include responsive(tab) {
+        font-size: 56.25%;
     }
- 
 }
-body{
+body {
     max-width: 100vw;
+    overflow-x: hidden;
 }
-body,p{
+body,
+p {
     font-family: $primary-font;
-
 }
-p{
-    margin:0;
+p {
+    margin: 0;
     line-height: 2.3rem;
 }
-h1{
-    font-size: 3.6rem;
-    margin:0;
+h1 {
+    font-size: 4.5rem;
+    margin: 0;
 }
-h2{
+h2 {
     font-size: 2.6rem;
 }
-h3{
+h3 {
     font-size: 1.6rem;
 }
 //utility
 
-.active{
-    color : #111 !important;
+.active {
+    color: #fff !important;
     position: relative;
-    border-bottom : 2px solid #333;
+    border-bottom: 2px solid #fff;
     font-weight: bold;
-
 }
 
-.active::before{
+.active::before {
     content: "";
-    height: .2rem;
+    height: 0.2rem;
     width: 100%;
     display: inline-block;
-    color : #fff;
+    color: #fff;
     position: absolute;
-    top : 100%;
+    top: 100%;
 }
 
-button:focus{
-    outline: none ;
+button:focus {
+    outline: none;
 }
 //heading
 
-.heading
-{
-    
+.heading {
     text-transform: uppercase;
-        margin-top: 4rem;
-        margin-bottom : 4rem;
-        text-align: center;
-        @include responsive (mobile)
-            {
-                font-size: 2rem;
-                margin-top: 2.5rem;
-                margin-bottom : 2.5rem;
-                
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    @include responsive(mobile) {
+        font-size: 2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    h2 {
+        display: inline-block;
+        position: relative;
+        color: #1e3a83;
+        &::after {
+            @include responsive(tab) {
+                width: 4rem;
+                right: -40px;
             }
-        h2{
-            
+            content: "";
             display: inline-block;
-            position: relative;
-            color : $secondary-color;
-            &::after{
-                @include responsive (tab)
-                {
-                   width: 4rem;
-                   right : -40px;
-                }
-                content: "";
-                display: inline-block;
-                width: 10rem;
-                height: .2rem;
-                position: absolute;
-                top:45%;
-                right : -107px;
-                background : $secondary-color;
-            }
-
-            &::before{
-                @include responsive (tab)
-                {
-                   width: 4rem;
-                   left : -40px;
-                }
-                content: "";
-                display: inline-block;
-                width: 10rem;
-                height: .2rem;
-                position: absolute;
-                top:45%;
-                left : -107px;
-                background :  $secondary-color;
-            }
-
-            .circle-left{
-
-               
-                display: inline-block;
-                position: absolute;
-                width : 1.8rem;
-                height: 1.8rem;
-                border-radius: 50%;
-                background : $secondary-color;
-                top : 20%;
-                left : -107px;
-                @include responsive (tab)
-                {
-                   left : -40px;
-                }
-            }
-
-            .circle-right{
-                display: inline-block;
-                position: absolute;
-                width : 1.8rem;
-                height: 1.8rem;
-                border-radius: 50%;
-                background : $secondary-color;
-                top : 20%;
-                right : -107px;
-                z-index : 2;
-
-                @include responsive (tab)
-                {
-                   right : -40px;
-                }
-                
-            }
+            width: 10rem;
+            height: 0.2rem;
+            position: absolute;
+            top: 45%;
+            right: -107px;
+            background: #1e3a83;
         }
-       
-       
-}
 
+        &::before {
+            @include responsive(tab) {
+                width: 4rem;
+                left: -40px;
+            }
+            content: "";
+            display: inline-block;
+            width: 10rem;
+            height: 0.2rem;
+            position: absolute;
+            top: 45%;
+            left: -107px;
+            background: #1e3a83;
+        }
+
+        // .circle-left {
+        //     display: inline-block;
+        //     position: absolute;
+        //     width: 1.8rem;
+        //     height: 1.8rem;
+        //     border-radius: 50%;
+        //     background: #1e3a83;
+        //     top: 20%;
+        //     left: -107px;
+        //     @include responsive(tab) {
+        //         left: -40px;
+        //     }
+        // }
+
+        // .circle-right {
+        //     display: inline-block;
+        //     position: absolute;
+        //     width: 1.8rem;
+        //     height: 1.8rem;
+        //     border-radius: 50%;
+        //     background: #1e3a83;
+        //     top: 20%;
+        //     right: -107px;
+        //     z-index: 2;
+
+        //     @include responsive(tab) {
+        //         right: -40px;
+        //     }
+        // }
+    }
+}
 
 //button
 
-.cbtn{
+.cbtn {
     outline: none;
     font-size: 1.6rem;
-    padding: .8rem 3rem;
-    color : $primary-color;
+    padding: 0.8rem 3rem;
+    color: #fff;
     text-transform: capitalize;
     font-weight: 600;
-    background : $secondary-color;
-    border: 1px solid $secondary-color;
+    background: #1e3a83;
+    border: 1px solid #1e3a83;
     z-index: 6;
-    margin-top : 1rem;
-    transition: .4s;
-    &:hover{
+    margin-top: 1rem;
+    transition: 0.4s;
+    &:hover {
         background-color: transparent;
-        color : $secondary-color;
+        color: #1e3a83;
 
-        i{
-            color : $secondary-color;
+        i {
+            color: #1e3a83;
         }
     }
-
 }
-
 
 //overlay
 
-.overlay{
-    position : absolute;
+.overlay {
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    transition: .4s;
+    transition: 0.4s;
     z-index: 5;
-    background: rgba(0, 0, 0,.6);
-    
+    background: rgba(0, 0, 0, 0.6);
 }
 
-.overlay-2{
-    position : absolute;
+.overlay-2 {
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    transition: .4s;
+    transition: 0.4s;
     z-index: 5;
-    background: rgba(0, 0, 0,.1);
-    
+    background: rgba(0, 0, 0, 0.1);
 }
 
-.box-shadow{
-    box-shadow: 0 3px 6px rgba(0,0,0,.14);
+.box-shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
 }

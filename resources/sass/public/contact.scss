@@ -1,44 +1,49 @@
-#contact{
+#contact {
+    padding: 5rem 0;
 
-    padding : 5rem 0;
-
-    #contact-form{
+    #contact-form {
         margin-top: 1rem;
-        input,label,textarea, .btn{
-            font-size:1.5rem;
+        input,
+        label,
+        textarea,
+        .btn {
+            font-size: 1.5rem;
             border-radius: 0;
-            
         }
 
-        input, textarea{
-            border: 1px solid $secondary-color;
+        input,
+        textarea {
+            border: 1px solid #1e3a83;
+            padding: 2rem;
         }
 
-        label{
+        label {
             font-weight: bold;
         }
 
-        .btn{
-            padding : .7rem 2rem;
+        .btn {
+            padding: 0.7rem 2rem;
+            background-color: #1e3a83;
+            border: 1px solid #1e3a83;
         }
 
-        margin-bottom : 3rem;
+        margin-bottom: 3rem;
     }
 
-    .contact-us-heading{
-        
-        padding-bottom : .3rem;
-        margin-bottom : 1.5rem;
+    .contact-us-heading {
+        padding-bottom: 0.3rem;
+        margin-bottom: 1.5rem;
+        color: #070c56;
     }
 
-    .contact-page-address{
-       
-
-        .location{
-            font-size : 1.4rem;
-
-            i{
-                margin-right: .5rem;
+    .contact-page-address {
+        font-size: 1.6rem;
+        p {
+            line-height: 3rem;
+        }
+        .location {
+            i {
+                margin-right: 0.5rem;
             }
         }
     }

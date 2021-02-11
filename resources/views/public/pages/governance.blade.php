@@ -1,4 +1,4 @@
-@extends("public.layout.app")
+@extends("public.layout.app", ["page_title"=> "Governing Body | MKSS"])
 
 @section("main")
     
@@ -20,7 +20,7 @@
                     <p class="designation"><b>{{$a->status}}</b></p>
                     <p class="email"><i class="fa fa-envelope"></i> {{$a->email}}</p>
                     <p class="description">
-                        {{$a->description}}
+                        {!!$a->description!!}
                     </p>
                 </div>
                 <hr>

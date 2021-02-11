@@ -1,42 +1,41 @@
-#governing-body{
-
-    
-    padding : 3rem 0;
-    p{
-        font-size : 1.5rem;
+#governing-body {
+    padding: 3rem 0;
+    p {
+        font-size: 1.6rem;
     }
-    hr{
-        margin-top : 3rem;
-        margin-bottom : 3rem;
+    hr {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
-    .profile{
-       
-        img{
-            border : 1px solid $secondary-color;
+    .profile {
+        img {
+            border: 1px solid $secondary-color;
         }
 
-        .name{
+        .name {
             text-transform: uppercase;
-            margin-top: .7rem;
+            margin-top: 0.7rem;
+            margin-bottom: 0.4rem;
         }
 
-        .designation{
-            margin-bottom : 1rem;
+        .designation {
+            margin-bottom: 1rem;
             font-size: 1.3rem;
         }
 
-        .name, .designation{
+        .name,
+        .designation {
             line-height: 1.5rem;
         }
 
-        .description{
-            font-size: 1.8rem;
-            line-height: 2.3rem;
+        .description {
+            color: #444;
+            line-height: 3rem;
+            font-size: 2rem;
         }
 
-        .email{
-            margin-bottom : 1rem
+        .email {
+            margin-bottom: 1rem;
         }
     }
-
 }

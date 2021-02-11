@@ -1,12 +1,22 @@
-@extends("public.layout.app", ["page_title" => str_replace("-", " ", $project->title)])
+@php
+    $head = [
+        "page_title" => str_replace("-"," ",$project->title), 
+        "description"=> $project->meta_description,
+        "keyword"=>$project->meta_keyword,
+        "robots"=>$project->meta_robots,
+    ]    ;
+
+@endphp
+
+@extends("public.layout.app", $head)
 
 @section("main")
 
 <x-navigation current="f"></x-navigation>
 
 <div class="container">
-    <div class="single-project">
-        <div class="col-lg-9 single-project-inner-container">
+    <section class="single-project">
+        <div class="col-lg-12 single-project-inner-container">
             <div class="single-project-title">
                 <h1>{{$project->title}}</h1>
             </div>
@@ -28,9 +38,9 @@
                 <p>Working Zone : <b>{{$project->area}}</b></p>
             </div>
             <hr class="bellow-img">
-            <div class="single-project-description">
-                {{$project->description}}
-            </div>
+            <article class="single-project-description">
+                {!!$project->description!!}
+            </article>
         </div>
 
         {{-- left sidevar --}}
@@ -38,7 +48,7 @@
 
         </div>
         
-    </div>
+    </section>
 </div>
 
 <x-footer></x-footer>

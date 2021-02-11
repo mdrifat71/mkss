@@ -1,9 +1,17 @@
-@extends('public.layout.app', ["page_title" => "MKSS-Manob Kollan Sabolombi Sangstha"])
+@php
+    $head = [
+        "page_title" => $meta["title"], 
+        "description"=> $meta["description"],
+        "keyword"=>$meta["keyword"],
+        "robots"=>$meta["robots"],
+    ]    ;
+
+@endphp
+
+@extends('public.layout.app', $head)
 
 @section('main')
-    @php
-       
-    @endphp
+ 
     <x-top-nav></x-top-nav>
     <x-navigation :current="$current"></x-navigation>
     <x-hero></x-hero>
@@ -42,7 +50,7 @@
         <div class="container">
             <div class="project-header heading">
                 <h2>
-                    project
+                    projects
                     <span class="circle-left"></span>
                     <span class="circle-right"></span>
 
@@ -79,7 +87,8 @@
     </section>
 
 
-    <section id="video">
+    
+    {{-- <section id="video">
         <div class="container">
             <div class="video-title ">
                 <h2>Recent Videos</h2>
@@ -96,7 +105,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 {{-- News section start --}}

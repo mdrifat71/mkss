@@ -10,7 +10,7 @@
         <div class="card-footer">
             <div class="project-status {{$status == 1 ? 'running-project' : 'archieved-project'}}">{{$status == 1 ? 'active' : 'archieved'}}</div>
             <div class="project-duration"><i class="fas fa-clock"></i>{{$from}} - {{$to ?? 'running'}}</div>
-            <a href="">
+            <a href="/project/{{$url}}">
                 <h3 class="project-title">{{$title}}</h3>
             </a>
             

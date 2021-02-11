@@ -1,64 +1,58 @@
-footer{
-    background : $secondary-color;
+footer {
+    background: #1e3a83; // #058998;
     padding-top: 3rem;
-    margin-top : 3rem;
-    color : #fff;
+    margin-top: 3rem;
+    color: #fff;
 
-    .f-block{
-        margin-bottom : 1rem;
+    .f-block {
+        margin-bottom: 1rem;
     }
 
-    .footer-title{
-
-        h3{
+    .footer-title {
+        h3 {
             text-transform: uppercase;
-            border-bottom : 1px solid #fff;
-            padding-bottom : .7rem;
-            margin-bottom : 2rem;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 0.7rem;
+            margin-bottom: 2rem;
         }
     }
 
-    .footer-contact{
-        p{
-            font-size : 1.4rem;
-            i{
+    .footer-contact {
+        p {
+            font-size: 1.4rem;
+            i {
                 margin-right: 1.5rem;
             }
             font-family: $primary-font !important;
-            margin-bottom : .8rem;
+            margin-bottom: 0.8rem;
         }
     }
 
-    .footer-social{
-        .social-container{
+    .footer-social {
+        .social-container {
             display: flex;
-            
-            @include responsive(mobile)
-            {
+
+            @include responsive(mobile) {
                 justify-content: center;
             }
-            a{
-                
+            a {
                 font-size: 1.8rem;
-                background : transparent;
-                color : $primary-color;
-               
-                margin-right : 2rem;
-                transition: .3s;
+                background: transparent;
+                color: $primary-color;
 
-               
+                margin-right: 2rem;
+                transition: 0.3s;
             }
         }
     }
 
-    .copy-right{
-        padding : .7rem;
-        background : #555;
-        text-transform: capitalize;
+    .copy-right {
+        padding: 0.7rem;
+        background: #fff;
+
         text-align: center;
-        font-size : 1.3rem;
-        color : $primary-color;
-        margin-top :1rem;
+        font-size: 1.3rem;
+        color: #070c56;
+        margin-top: 1rem;
     }
-    
 }

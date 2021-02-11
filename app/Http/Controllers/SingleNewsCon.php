@@ -24,6 +24,8 @@ class SingleNewsCon extends Controller
         }
         else
         {
+           
+            
             $data = [
                 "news" => $news
             ];

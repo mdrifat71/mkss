@@ -1,59 +1,76 @@
-.single-news{
-
-    
+.single-news {
     padding: 3rem 0;
-
-
-    hr{
-        border:1px solid $secondary-color;
-       
+    @include responsive(tab-big) {
+        overflow: hidden;
     }
-    &-title{
+    hr {
+        border: 1px solid $secondary-color;
+    }
+    &-title {
         text-transform: capitalize;
-        margin-bottom : .5rem;
+        margin-bottom: 0.5rem;
+        font-size: 4.5rem;
     }
 
-    
-    &-category{
-        p{
-            font-size : 1.2rem;
-            margin-top : 1rem;
-            padding : .2rem 1.4rem;
-            border-radius : 1rem;
+    &-category {
+        p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            padding: 0.2rem 1.4rem;
+            border-radius: 1rem;
             display: inline-block;
-            background : #007bff;
-            color : #fff;
+            background: #1e3a83;
+            color: #fff;
             text-transform: lowercase;
         }
-        
     }
 
-   
-    &-description{
-        font-size : 1.8rem;
-    }
+    &-description {
+        font-size: 2.4rem;
+        color: #444;
+        line-height: 4rem;
+        thead {
+            background: #f2f2f2;
+        }
+        td,
+        th {
+            border: 1px solid #eee;
+            border-collapse: collapse;
+            padding: 1rem;
+        }
+        figure {
+            overflow-x: scroll;
+            transform: rotateX(180deg);
 
-    &-date{
-        font-size: 1.4rem;
+            table {
+                transform: rotateX(180deg);
+            }
+        }
 
-        i{
-            margin-right: .4rem;
+        p {
+            line-height: 4rem;
         }
     }
 
-    .image-caption{
-        background : $brown;
+    &-date {
+        font-size: 1.4rem;
+
+        i {
+            margin-right: 0.4rem;
+        }
+    }
+
+    .image-caption {
+        background: $brown;
         text-align: center;
         font-size: 1.4rem;
-        padding : .7rem;
+        padding: 0.7rem;
         font-style: italic;
     }
 
-    .single-news-inner-container
-    {
-        @include responsive(tab)
-        {
-            padding : 0;
+    .single-news-inner-container {
+        @include responsive(tab) {
+            padding: 0;
         }
     }
 }

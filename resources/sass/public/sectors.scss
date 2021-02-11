@@ -1,49 +1,39 @@
-#sectors{
-    transition: .3s;
+#sectors {
+    transition: 0.3s;
     overflow: hidden;
 
-    .sectors-card{
-        
-        .card{
-            border-radius: 5px;
-            box-shadow:$box-shadow;
-            border : 0 !important;
-            
-            .card-img-container{
-                 position: relative;
+    .sector-card {
+        border-radius: 10px;
+        padding: 3rem;
+        background: rgb(247, 244, 244);
 
+        &-image-container {
+            text-align: center;
+
+            img {
+                width: 50%;
             }
+        }
 
-            .card-header{
-                background-color: $primary-color;
-                height: .4rem !important;
-                padding : 0;
-            }
-            .card-footer{
-               
-                background-color: $secondary-color;
-                color : $primary-color;
-                h3{
-                    text-transform: uppercase;
-                    text-align: center;
-                    padding : 1rem;
-                }
-
-                i{
-                    font-weight: lighter;
-                    margin-left : 2rem;
-                }
+        &-title {
+            text-align: center;
+            margin-top: 2rem;
+            text-transform: uppercase;
+            font-weight: lighter;
+            h3 {
+                font-size: 1.8rem;
+                color: #1e3a83;
             }
         }
     }
 
-    .sectors-container{
+    .sectors-container {
         position: relative;
-        margin-bottom : 2rem;
-        
-        .sectors-link{
+        margin-bottom: 2rem;
+
+        .sectors-link {
             position: absolute;
-            top:0;
+            top: 0;
             cursor: pointer;
             width: 100%;
             height: 100%;

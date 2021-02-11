@@ -1,4 +1,14 @@
-@extends("public.layout.app", ["page_title" => str_replace("-"," ",$news->title)])
+@php
+    $head = [
+        "page_title" => str_replace("-"," ",$news->title), 
+        "description"=> $news->meta_description,
+        "keyword"=>$news->meta_keyword,
+        "robots"=>$news->meta_robots,
+    ]    ;
+
+@endphp
+
+@extends("public.layout.app", $head)
 
 @section("main")
 
@@ -6,7 +16,7 @@
 
 <div class="container">
     <div class="single-news">
-        <div class="col-lg-9 single-news-inner-container">
+        <div class="col-lg-12 single-news-inner-container">
             <div class="single-news-title">
                 <h1>{{$news->title}}</h1>
             </div>
@@ -19,15 +29,15 @@
             </div>
             <div class="single-news-image">
                 <div class="">
-                    <img src='{{asset("image/news/$news->image")}}' alt="{{$news->image}}" class="img-fluid">
+                    <img src='{{asset("image/news/$news->image")}}' alt="{{$news->title}}" class="img-fluid">
                 </div>
                 <div class="image-caption">{{ $news->imagecaption ?? " " }}</div>
             </div>
            
             <hr class="bellow-img">
-            <div class="single-news-description">
+            <article class="single-news-description">
                 {!! $news->description !!}
-            </div>
+            </article>
         </div>
 
         {{-- left sidevar --}}

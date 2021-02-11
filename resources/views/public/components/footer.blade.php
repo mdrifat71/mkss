@@ -7,9 +7,10 @@
                         contact
                     </h3>
                     <p class="phone"><i class="fa fa-phone-alt"></i>{{$primary_mobile}}</p>
+                    <p class="phone"><i class="fa fa-phone-alt"></i>+880 9638095899</p>
                     <p class="email"><i class="fa fa-envelope"></i>{{$primary_email}}</p>
                     <p class="address"><i class="fa fa-location-arrow"></i>{{$primary_location}}</p>
-                    <p class="address"><i class="fa fa-location-arrow"></i>Sadullapur, Gaibandha</p>
+                    
                 </div>
             </div>
 
@@ -18,7 +19,7 @@
                     <h3>Map</h3>
                 </div>
                 <div class="map">
-                    <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm">Plan A Journey</a></div>
+                  <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=25.393544686772564,%2089.46784205647853+(MKSS)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm">MKSS</a></div>
                 </div>
             </div>
 
@@ -28,10 +29,8 @@
                 </div>
                 <div class="footer-social">       
                     <div class="social-container">
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/manobkallayanswabolombisongstha/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                       
                     </div>
                 </div>
             </div>

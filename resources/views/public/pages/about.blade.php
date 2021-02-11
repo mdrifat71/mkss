@@ -1,18 +1,13 @@
-@extends('public.layout.app')
+@extends('public.layout.app', ["page_title"=> "About us | MKSS", "description" => $description])
 
 @section('main')
     <x-navigation :current="$current"></x-navigation>
-    <div id="about-us-page">
+    <main id="about-us-page">
         <div class="container ">
-            @foreach ($info as $i)
-                <div class="{{$i->heading}} x block">
-                    <h2><i class="fad fa-share"></i>{{$i->heading}}</h2>
-                    <p class="description">
-                        {!! $i->content !!}
-                    </p>
-                </div>
-            @endforeach
+           <article>
+                {!!$content!!}
+           </article>
         </div>      
-    </div>
+    </main>
     <x-footer></x-footer>
 @endsection

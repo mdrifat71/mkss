@@ -143,8 +143,8 @@ mobile_menu.addEventListener("click", function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\rifat\Desktop\mkss\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\rifat\Desktop\mkss\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\rifat\Desktop\MKSSDEV\mkss\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\rifat\Desktop\MKSSDEV\mkss\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

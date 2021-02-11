@@ -1,131 +1,151 @@
+#project-page {
+    #project-overview {
+        padding: 1.5rem;
 
-#project-page{
+        article {
+            font-size: 2.2rem;
+            color: #444;
+
+            figure {
+                overflow-x: auto;
+                transform: rotateX(180deg);
+
+                table {
+                    transform: rotateX(180deg);
+                }
+            }
+
+            table,
+            tr,
+            td,
+            th {
+                border: 1px solid #999;
+                border-collapse: collapse;
+            }
+
+            td,
+            th {
+                padding: 1rem;
+            }
+            p {
+                line-height: 3.5rem;
+            }
+        }
+    }
 
     //project-page
-    background : $primary-color;
+    background: $primary-color;
     padding: 3rem 0;
 
-
-    .project-page-sidebar
-    {
-        @include responsive(tab-big)
-        {
+    .project-page-sidebar {
+        @include responsive(tab-big) {
             order: 1;
         }
     }
-    h2{
+    h2 {
         font-size: 2.4rem;
     }
 
-    .project-page-sidebar-heading{
-        background : #28A745;
-        color : $primary-color;
+    .project-page-sidebar-heading {
+        background: #1e3a83;
+        color: $primary-color;
         font-weight: lighter;
-        padding:.8rem;
-        h2{
+        padding: 0.8rem;
+        h2 {
             text-align: center;
             text-transform: uppercase;
             font-size: 2.2rem;
-            margin : 0;
+            margin: 0;
         }
     }
-    .project-page-side-bar{
+    .project-page-side-bar {
         display: flex;
         flex-direction: column;
         //background-color: $primary-color;
         padding-top: 1.2rem;
-        border : 1px solid #EEEEEE;
-        
-         
-        a{
+        border: 1px solid #eeeeee;
+
+        a {
             font-size: 1.6rem;
             text-transform: capitalize;
-            color : #444;
-            padding : 1rem;
+            color: #444;
+            padding: 1rem;
             border-bottom: 1px solid #eeeeee;
-            
-            i{
-                margin-right : 1rem;
+
+            i {
+                margin-right: 1rem;
             }
         }
     }
 
-    .project-page-heading{
-        padding:.5rem;
-        border-bottom:2px solid $secondary-color;
+    .project-page-heading {
+        padding: 0.5rem;
+        border-bottom: 2px solid #1e3a83;
         margin-bottom: 3rem;
 
-        h2{
+        h2 {
             text-transform: uppercase;
-            color : #444;
-            
-           
-            i{
+            color: #1e3a83;
+
+            i {
                 font-size: 2rem;
-                margin-right : 2rem;
-                
-                
+                margin-right: 2rem;
             }
         }
     }
-
 
     //pagination
 
-    .project-pagination{
-        margin-top : 2rem;
+    .project-pagination {
+        margin-top: 2rem;
         font-size: 1.8rem;
-        a{
-            color : $secondary-color;
+        a {
+            color: $secondary-color;
         }
-        .active{
-            border : none;
-            background : $secondary-color;
-            color : $primary-color !important;
+        .active {
+            border: none;
+            background: $secondary-color;
+            color: $primary-color !important;
         }
     }
 }
 
-
 //single project item
-.project-item{
-
+.project-item {
     margin-bottom: 2.5rem;
-    .card{
+    .card {
         box-shadow: $box-shadow;
-        border : 1px solid #eeeeee;
-        .card-img-top{
+        border: 1px solid #eeeeee;
+        .card-img-top {
             position: relative;
-    
-            .tag{
-               // box-shadow:-6px 6px 8px rgba(255, 255, 255, 0.3);
+
+            .tag {
+                // box-shadow:-6px 6px 8px rgba(255, 255, 255, 0.3);
                 z-index: 5;
                 position: absolute;
-                padding : .8rem 1.4rem;
-                background : #007bff;// #007bff;
-                top:-1rem;
+                padding: 0.8rem 1.4rem;
+                background: #1e3a83; // #007bff;
+                top: -1rem;
                 right: 0;
                 font-size: 1.2rem;
                 text-transform: uppercase;
-                color : $primary-color;
+                color: $primary-color;
                 font-family: $primary-font;
             }
-    
-            i{
-                margin-right : 1rem;
-                color :$primary-color;
+
+            i {
+                margin-right: 1rem;
+                color: $primary-color;
             }
         }
 
+        .card-footer {
+            padding: 1.5rem;
+            background: $primary-color;
+            color: $green;
 
-    
-        .card-footer{
-            padding : 1.5rem;
-            background : $primary-color;
-            color : $green;
-            
-            .project-status{
-                padding : .2rem 1.4rem;
+            .project-status {
+                padding: 0.2rem 1.4rem;
                 border-radius: 4px;
                 display: inline-block;
                 margin-bottom: 1rem;
@@ -133,86 +153,55 @@
                 text-transform: lowercase;
             }
 
-            a{
+            a {
                 text-decoration: none;
-                h3{
-                    margin:.7rem 0;
+                h3 {
+                    margin: 0.7rem 0;
                     font-size: 1.8rem;
-                    color : $secondary-color;
+                    color: #1e3a83;
                     text-transform: uppercase;
                     font-family: $secondary-font;
                     font-weight: bold;
                 }
             }
-    
-            .project-duration{
+
+            .project-duration {
                 font-size: 1rem;
-                color : $secondary-color;
-                i{
-                    margin-right : 1rem;
-                    color : $secondary-color;
+                color: #1e3a83;
+                i {
+                    margin-right: 1rem;
+                    color: #1e3a83;
                     font-size: 1.3rem;
                 }
             }
-    
-            .project-description{
+
+            .project-description {
                 font-size: 1.4rem;
-                color : $secondary-color;
+                color: $secondary-color;
                 font-family: $secondary-font;
-               
             }
-    
-            .cbtn{
-                padding: .5rem 1.5rem;
+
+            .cbtn {
+                padding: 0.5rem 1.5rem;
                 font-size: 1.2rem;
-                margin:.7rem 0;
-                background: $secondary-color;
-                color : $primary-color;
-                border : 1px solid $secondary-color;
-                transition: .3s;
-                &:hover{
-                    color : $secondary-color;
+                margin: 0.7rem 0;
+                background: #1e3a83;
+                color: #fff;
+                border: 1px solid #1e3a83;
+                transition: 0.3s;
+                &:hover {
+                    color: #1e3a83;
                     background-color: transparent;
 
-                    i{
-                        color : $secondary-color;
+                    i {
+                        color: #1e3a83;
                         transform: translateX(5px);
-                        
                     }
                 }
-                i{
-                    margin-left: .8rem;
-                    transition: transform .3s;
+                i {
+                    margin-left: 0.8rem;
+                    transition: transform 0.3s;
                 }
-            }
-        }
-    }
-}
-
-
-.more{
-    text-align: center;
-    margin-top : 1rem;
-    .cbtn{
-        background-color: $secondary-color;
-        color: #fff;
-        border:none;
-        height: 6rem;
-        width: 6rem;
-        padding-top: 1rem;
-        padding-left:2.4rem;
-        border-radius: 50%;
-        font-size: 1.8rem;
-        //border:2px solid $primary-color;
-        box-shadow: 1px 0px 26px rgb(5, 56, 107);
-        i{
-            transition: .4s;
-        }
-        &:hover{
-            
-            i{
-                color: $primary-color;
-                transform: translateX(.4rem);
             }
         }
     }

@@ -1,68 +1,88 @@
-.single-project{
-
-    
+.single-project {
     padding: 3rem 0;
-
-
-    hr{
-        border:1px solid $secondary-color;
-       
+    @include responsive(tab-big) {
+        overflow: hidden;
     }
-    &-title{
+    hr {
+        border: 1px solid $secondary-color;
+    }
+    &-title {
         text-transform: capitalize;
-        margin-bottom : .5rem;
+        margin-bottom: 0.5rem;
     }
 
-    &-duration{
-        font-size : 1rem;
-        margin-bottom : 0rem;
-        p{
+    &-duration {
+        font-size: 1rem;
+        margin-bottom: 0rem;
+        p {
             font-family: $secondary-font;
 
-            i{
-                margin-right:1rem;
+            i {
+                margin-right: 1rem;
             }
         }
     }
 
-    &-sector{
-        p{
-            font-size : 1.2rem;
-            margin-top : 1rem;
-            padding : .2rem 1.4rem;
-            border-radius : 1rem;
+    &-sector {
+        p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            padding: 0.2rem 1.4rem;
+            border-radius: 1rem;
             display: inline-block;
-            background : #007bff;
-            color : #fff;
+            background: #1e3a83;
+            color: #fff;
             text-transform: lowercase;
         }
-        
     }
 
-    .project-status{
-        padding : .2rem 1.4rem;
+    .project-status {
+        padding: 0.2rem 1.4rem;
         border-radius: 4px;
         display: inline-block;
         font-size: 1.2rem;
         text-transform: lowercase;
     }
 
-    &-description{
-        font-size : 1.8rem;
+    &-description {
+        font-size: 2.4rem;
+        color: #444;
+        line-height: 4rem;
+        thead {
+            background: #f2f2f2;
+        }
+
+        td,
+        th {
+            border: 1px solid #999;
+            border-collapse: collapse;
+            padding: 1rem;
+        }
+
+        figure {
+            overflow-x: auto;
+            transform: rotateX(180deg);
+
+            table {
+                transform: rotateX(180deg);
+            }
+        }
+
+        p {
+            line-height: 4rem;
+        }
     }
 
-    &-working-zone{
+    &-working-zone {
         font-size: 1.5rem;
-        margin-top : .5rem;
+        margin-top: 0.5rem;
 
         text-transform: uppercase;
     }
 
-    .single-project-inner-container
-    {
-        @include responsive(tab)
-        {
-            padding : 0;
+    .single-project-inner-container {
+        @include responsive(tab) {
+            padding: 0;
         }
     }
 }

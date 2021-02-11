@@ -10926,6 +10926,7 @@ bg : 2F2E41
 
 body {
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body,
@@ -10939,7 +10940,7 @@ p {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 4.5rem;
   margin: 0;
 }
 
@@ -10952,9 +10953,9 @@ h3 {
 }
 
 .active {
-  color: #111 !important;
+  color: #fff !important;
   position: relative;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid #fff;
   font-weight: bold;
 }
 
@@ -10990,7 +10991,7 @@ button:focus {
 .heading h2 {
   display: inline-block;
   position: relative;
-  color: #555;
+  color: #1e3a83;
 }
 
 .heading h2::after {
@@ -11001,7 +11002,7 @@ button:focus {
   position: absolute;
   top: 45%;
   right: -107px;
-  background: #555;
+  background: #1e3a83;
 }
 
 @media only screen and (max-width: 768px) {
@@ -11019,48 +11020,13 @@ button:focus {
   position: absolute;
   top: 45%;
   left: -107px;
-  background: #555;
+  background: #1e3a83;
 }
 
 @media only screen and (max-width: 768px) {
   .heading h2::before {
     width: 4rem;
     left: -40px;
-  }
-}
-
-.heading h2 .circle-left {
-  display: inline-block;
-  position: absolute;
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  background: #555;
-  top: 20%;
-  left: -107px;
-}
-
-@media only screen and (max-width: 768px) {
-  .heading h2 .circle-left {
-    left: -40px;
-  }
-}
-
-.heading h2 .circle-right {
-  display: inline-block;
-  position: absolute;
-  width: 1.8rem;
-  height: 1.8rem;
-  border-radius: 50%;
-  background: #555;
-  top: 20%;
-  right: -107px;
-  z-index: 2;
-}
-
-@media only screen and (max-width: 768px) {
-  .heading h2 .circle-right {
-    right: -40px;
   }
 }
 
@@ -11071,8 +11037,8 @@ button:focus {
   color: #fff;
   text-transform: capitalize;
   font-weight: 600;
-  background: #555;
-  border: 1px solid #555;
+  background: #1e3a83;
+  border: 1px solid #1e3a83;
   z-index: 6;
   margin-top: 1rem;
   transition: 0.4s;
@@ -11080,11 +11046,11 @@ button:focus {
 
 .cbtn:hover {
   background-color: transparent;
-  color: #555;
+  color: #1e3a83;
 }
 
 .cbtn:hover i {
-  color: #555;
+  color: #1e3a83;
 }
 
 .overlay {
@@ -11112,10 +11078,19 @@ button:focus {
 }
 
 .top-nav {
-  background: #555;
+  background: #fff;
   padding: 1rem 0;
-  color: #fff;
+  color: #070c56;
   text-align: right;
+  font-size: 1.4rem;
+}
+
+.top-nav .container {
+  height: 100%;
+}
+
+.top-nav .container address {
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 560px) {
@@ -11147,7 +11122,14 @@ header {
   z-index: 10;
   padding: 1rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background: #fff;
+  background: #070c56;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding-bottom: 0;
+  }
 }
 
 header .logo-container {
@@ -11168,6 +11150,7 @@ header .logo-container a {
 header .logo {
   width: 64px;
   height: 64px;
+  align-items: center;
 }
 
 header .logo img {
@@ -11183,8 +11166,12 @@ header .logo img {
 }
 
 header .logo .logo-text {
+  font-family: "Courgette", cursive;
   font-size: 2.5rem;
+  color: #fff;
   margin: 1.1rem 1.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: lighter;
 }
 
 header nav {
@@ -11211,6 +11198,7 @@ header nav .nav-menu-container {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    padding-bottom: 2rem;
   }
 
   header nav .nav-menu-container .active {
@@ -11221,7 +11209,7 @@ header nav .nav-menu-container {
 header nav .nav-menu-container .nav-link {
   padding-left: 0;
   padding-right: 0;
-  color: #333;
+  color: #fff;
   font-size: 1.8rem;
   margin-left: 2rem;
   cursor: pointer;
@@ -11229,11 +11217,11 @@ header nav .nav-menu-container .nav-link {
 }
 
 header nav .nav-menu-container .nav-link:hover {
-  color: #888;
+  color: #ddd;
 }
 
 header nav .nav-menu-container .project-menu {
-  border: 1px solid #111 !important;
+  border: 1px solid #fff !important;
   border-radius: 2px;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -11327,36 +11315,30 @@ header .navigation-container .hamburger {
   overflow: hidden;
 }
 
-#sectors .sectors-card .card {
-  border-radius: 5px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  border: 0 !important;
+#sectors .sector-card {
+  border-radius: 10px;
+  padding: 3rem;
+  background: #f7f4f4;
 }
 
-#sectors .sectors-card .card .card-img-container {
-  position: relative;
-}
-
-#sectors .sectors-card .card .card-header {
-  background-color: #fff;
-  height: 0.4rem !important;
-  padding: 0;
-}
-
-#sectors .sectors-card .card .card-footer {
-  background-color: #555;
-  color: #fff;
-}
-
-#sectors .sectors-card .card .card-footer h3 {
-  text-transform: uppercase;
+#sectors .sector-card-image-container {
   text-align: center;
-  padding: 1rem;
 }
 
-#sectors .sectors-card .card .card-footer i {
+#sectors .sector-card-image-container img {
+  width: 50%;
+}
+
+#sectors .sector-card-title {
+  text-align: center;
+  margin-top: 2rem;
+  text-transform: uppercase;
   font-weight: lighter;
-  margin-left: 2rem;
+}
+
+#sectors .sector-card-title h3 {
+  font-size: 1.8rem;
+  color: #1e3a83;
 }
 
 #sectors .sectors-container {
@@ -11373,15 +11355,15 @@ header .navigation-container .hamburger {
 }
 
 #about {
-  background: #dedede9c;
+  background: #e8f1f6;
   margin-top: 2rem;
   padding: 5rem;
-  color: #555;
+  color: #070c56;
 }
 
 #about .about-heading {
   text-align: center;
-  color: #555;
+  color: #070c56;
   text-transform: uppercase;
   margin-bottom: 1.8rem;
   letter-spacing: 0.2rem;
@@ -11389,39 +11371,92 @@ header .navigation-container .hamburger {
 
 #about p {
   font-weight: lighter;
-  font-size: 1.7rem;
+  font-size: 2rem;
   text-align: center;
 }
 
 #about button {
+  background-color: #1e3a83;
   margin-top: 1.4rem;
+  border-color: #1e3a83;
+}
+
+#about button:hover {
+  color: #ddd;
 }
 
 #about-us-page {
-  padding: 2rem 0;
+  padding: 2.5rem 1rem;
 }
 
-#about-us-page .x {
-  margin-bottom: 2rem;
+#about-us-page article {
+  font-size: 2.4rem;
+  color: #444;
+  line-height: 4rem;
 }
 
-#about-us-page h2 {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #555;
+#about-us-page article thead {
+  background: #f2f2f2;
 }
 
-#about-us-page h2 i {
-  margin-right: 1rem;
+#about-us-page article td,
+#about-us-page article th {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  padding: 1rem;
 }
 
-#about-us-page .description {
-  font-size: 1.8rem;
+#about-us-page article figure {
+  overflow-x: auto;
+  transform: rotateX(180deg);
+}
+
+#about-us-page article figure table {
+  transform: rotateX(180deg);
+}
+
+#about-us-page article p {
+  line-height: 4rem;
 }
 
 #project-page {
   background: #fff;
   padding: 3rem 0;
+}
+
+#project-page #project-overview {
+  padding: 1.5rem;
+}
+
+#project-page #project-overview article {
+  font-size: 2.2rem;
+  color: #444;
+}
+
+#project-page #project-overview article figure {
+  overflow-x: auto;
+  transform: rotateX(180deg);
+}
+
+#project-page #project-overview article figure table {
+  transform: rotateX(180deg);
+}
+
+#project-page #project-overview article table,
+#project-page #project-overview article tr,
+#project-page #project-overview article td,
+#project-page #project-overview article th {
+  border: 1px solid #999;
+  border-collapse: collapse;
+}
+
+#project-page #project-overview article td,
+#project-page #project-overview article th {
+  padding: 1rem;
+}
+
+#project-page #project-overview article p {
+  line-height: 3.5rem;
 }
 
 @media only screen and (max-width: 990px) {
@@ -11435,7 +11470,7 @@ header .navigation-container .hamburger {
 }
 
 #project-page .project-page-sidebar-heading {
-  background: #28A745;
+  background: #1e3a83;
   color: #fff;
   font-weight: lighter;
   padding: 0.8rem;
@@ -11452,7 +11487,7 @@ header .navigation-container .hamburger {
   display: flex;
   flex-direction: column;
   padding-top: 1.2rem;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
 }
 
 #project-page .project-page-side-bar a {
@@ -11469,13 +11504,13 @@ header .navigation-container .hamburger {
 
 #project-page .project-page-heading {
   padding: 0.5rem;
-  border-bottom: 2px solid #555;
+  border-bottom: 2px solid #1e3a83;
   margin-bottom: 3rem;
 }
 
 #project-page .project-page-heading h2 {
   text-transform: uppercase;
-  color: #444;
+  color: #1e3a83;
 }
 
 #project-page .project-page-heading h2 i {
@@ -11515,7 +11550,7 @@ header .navigation-container .hamburger {
   z-index: 5;
   position: absolute;
   padding: 0.8rem 1.4rem;
-  background: #007bff;
+  background: #1e3a83;
   top: -1rem;
   right: 0;
   font-size: 1.2rem;
@@ -11551,7 +11586,7 @@ header .navigation-container .hamburger {
 .project-item .card .card-footer a h3 {
   margin: 0.7rem 0;
   font-size: 1.8rem;
-  color: #555;
+  color: #1e3a83;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -11559,12 +11594,12 @@ header .navigation-container .hamburger {
 
 .project-item .card .card-footer .project-duration {
   font-size: 1rem;
-  color: #555;
+  color: #1e3a83;
 }
 
 .project-item .card .card-footer .project-duration i {
   margin-right: 1rem;
-  color: #555;
+  color: #1e3a83;
   font-size: 1.3rem;
 }
 
@@ -11578,52 +11613,25 @@ header .navigation-container .hamburger {
   padding: 0.5rem 1.5rem;
   font-size: 1.2rem;
   margin: 0.7rem 0;
-  background: #555;
+  background: #1e3a83;
   color: #fff;
-  border: 1px solid #555;
+  border: 1px solid #1e3a83;
   transition: 0.3s;
 }
 
 .project-item .card .card-footer .cbtn:hover {
-  color: #555;
+  color: #1e3a83;
   background-color: transparent;
 }
 
 .project-item .card .card-footer .cbtn:hover i {
-  color: #555;
+  color: #1e3a83;
   transform: translateX(5px);
 }
 
 .project-item .card .card-footer .cbtn i {
   margin-left: 0.8rem;
   transition: transform 0.3s;
-}
-
-.more {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.more .cbtn {
-  background-color: #555;
-  color: #fff;
-  border: none;
-  height: 6rem;
-  width: 6rem;
-  padding-top: 1rem;
-  padding-left: 2.4rem;
-  border-radius: 50%;
-  font-size: 1.8rem;
-  box-shadow: 1px 0px 26px #05386b;
-}
-
-.more .cbtn i {
-  transition: 0.4s;
-}
-
-.more .cbtn:hover i {
-  color: #fff;
-  transform: translateX(0.4rem);
 }
 
 #video {
@@ -11665,7 +11673,7 @@ header .navigation-container .hamburger {
 }
 
 #news-page .news-page-sidebar-heading {
-  background: #007bff;
+  background: #1e3a83;
   color: #fff;
   font-weight: lighter;
   padding: 0.8rem;
@@ -11688,7 +11696,7 @@ header .navigation-container .hamburger {
   display: flex;
   flex-direction: column;
   padding-top: 1.2rem;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
 }
 
 #news-page .news-page-side-bar a {
@@ -11705,13 +11713,13 @@ header .navigation-container .hamburger {
 
 #news-page .news-page-heading {
   padding: 0.5rem;
-  border-bottom: 2px solid #555;
+  border-bottom: 2px solid #1e3a83;
   margin-bottom: 3rem;
 }
 
 #news-page .news-page-heading h2 {
   text-transform: uppercase;
-  color: #444;
+  color: #1e3a83;
 }
 
 #news-page .news-page-heading h2 i {
@@ -11744,12 +11752,12 @@ header .navigation-container .hamburger {
 }
 
 .news-item .card .card-header {
-  background: #555;
+  background: #1e3a83;
   padding: 0.2rem;
 }
 
 .news-item .card .card-footer {
-  background: #dedede9c;
+  background: #e8f1f6;
   padding-bottom: 2rem;
 }
 
@@ -11765,7 +11773,7 @@ header .navigation-container .hamburger {
 
 .news-item .card .news-info a h3 {
   font-family: "Montserrat", sans-serif;
-  color: #555;
+  color: #1e3a83;
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -11776,7 +11784,7 @@ header .navigation-container .hamburger {
 }
 
 .news-item .card .news-info .news-category {
-  background-color: #007bff;
+  background-color: #1e3a83;
   font-size: 1rem;
   color: #fff;
   text-transform: capitalize;
@@ -11792,17 +11800,21 @@ header .navigation-container .hamburger {
 }
 
 .news-item .card .news-info .date {
-  margin-bottom: 0.4rem;
+  color: #1e3a83;
+  margin-bottom: 0.6rem;
   font-size: 1.2rem;
+}
+
+.news-item .card .news-info .date i {
+  color: #1e3a83;
 }
 
 .more {
   text-align: center;
-  margin-top: 1rem;
 }
 
 .more .cbtn {
-  background-color: #555;
+  background-color: #1e3a83;
   color: #fff;
   border: none;
   height: 6rem;
@@ -11811,7 +11823,7 @@ header .navigation-container .hamburger {
   padding-left: 2.4rem;
   border-radius: 50%;
   font-size: 1.8rem;
-  box-shadow: 1px 0px 26px #05386b;
+  box-shadow: 1px 0px 9px #05386b;
 }
 
 .more .cbtn i {
@@ -11824,7 +11836,7 @@ header .navigation-container .hamburger {
 }
 
 footer {
-  background: #555;
+  background: #1e3a83;
   padding-top: 3rem;
   margin-top: 3rem;
   color: #fff;
@@ -11871,11 +11883,10 @@ footer .footer-social .social-container a {
 
 footer .copy-right {
   padding: 0.7rem;
-  background: #555;
-  text-transform: capitalize;
+  background: #fff;
   text-align: center;
   font-size: 1.3rem;
-  color: #fff;
+  color: #070c56;
   margin-top: 1rem;
 }
 
@@ -11898,7 +11909,8 @@ footer .copy-right {
 
 #contact #contact-form input,
 #contact #contact-form textarea {
-  border: 1px solid #555;
+  border: 1px solid #1e3a83;
+  padding: 2rem;
 }
 
 #contact #contact-form label {
@@ -11907,15 +11919,22 @@ footer .copy-right {
 
 #contact #contact-form .btn {
   padding: 0.7rem 2rem;
+  background-color: #1e3a83;
+  border: 1px solid #1e3a83;
 }
 
 #contact .contact-us-heading {
   padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
+  color: #070c56;
 }
 
-#contact .contact-page-address .location {
-  font-size: 1.4rem;
+#contact .contact-page-address {
+  font-size: 1.6rem;
+}
+
+#contact .contact-page-address p {
+  line-height: 3rem;
 }
 
 #contact .contact-page-address .location i {
@@ -11924,6 +11943,12 @@ footer .copy-right {
 
 .single-project {
   padding: 3rem 0;
+}
+
+@media only screen and (max-width: 990px) {
+  .single-project {
+    overflow: hidden;
+  }
 }
 
 .single-project hr {
@@ -11954,7 +11979,7 @@ footer .copy-right {
   padding: 0.2rem 1.4rem;
   border-radius: 1rem;
   display: inline-block;
-  background: #007bff;
+  background: #1e3a83;
   color: #fff;
   text-transform: lowercase;
 }
@@ -11968,7 +11993,33 @@ footer .copy-right {
 }
 
 .single-project-description {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+  color: #444;
+  line-height: 4rem;
+}
+
+.single-project-description thead {
+  background: #f2f2f2;
+}
+
+.single-project-description td,
+.single-project-description th {
+  border: 1px solid #999;
+  border-collapse: collapse;
+  padding: 1rem;
+}
+
+.single-project-description figure {
+  overflow-x: auto;
+  transform: rotateX(180deg);
+}
+
+.single-project-description figure table {
+  transform: rotateX(180deg);
+}
+
+.single-project-description p {
+  line-height: 4rem;
 }
 
 .single-project-working-zone {
@@ -11988,7 +12039,7 @@ footer .copy-right {
 }
 
 #governing-body p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 #governing-body hr {
@@ -12003,6 +12054,7 @@ footer .copy-right {
 #governing-body .profile .name {
   text-transform: uppercase;
   margin-top: 0.7rem;
+  margin-bottom: 0.4rem;
 }
 
 #governing-body .profile .designation {
@@ -12016,8 +12068,9 @@ footer .copy-right {
 }
 
 #governing-body .profile .description {
-  font-size: 1.8rem;
-  line-height: 2.3rem;
+  color: #444;
+  line-height: 3rem;
+  font-size: 2rem;
 }
 
 #governing-body .profile .email {
@@ -12028,6 +12081,12 @@ footer .copy-right {
   padding: 3rem 0;
 }
 
+@media only screen and (max-width: 990px) {
+  .single-news {
+    overflow: hidden;
+  }
+}
+
 .single-news hr {
   border: 1px solid #555;
 }
@@ -12035,6 +12094,7 @@ footer .copy-right {
 .single-news-title {
   text-transform: capitalize;
   margin-bottom: 0.5rem;
+  font-size: 4.5rem;
 }
 
 .single-news-category p {
@@ -12043,13 +12103,39 @@ footer .copy-right {
   padding: 0.2rem 1.4rem;
   border-radius: 1rem;
   display: inline-block;
-  background: #007bff;
+  background: #1e3a83;
   color: #fff;
   text-transform: lowercase;
 }
 
 .single-news-description {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
+  color: #444;
+  line-height: 4rem;
+}
+
+.single-news-description thead {
+  background: #f2f2f2;
+}
+
+.single-news-description td,
+.single-news-description th {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  padding: 1rem;
+}
+
+.single-news-description figure {
+  overflow-x: scroll;
+  transform: rotateX(180deg);
+}
+
+.single-news-description figure table {
+  transform: rotateX(180deg);
+}
+
+.single-news-description p {
+  line-height: 4rem;
 }
 
 .single-news-date {
@@ -12072,5 +12158,15 @@ footer .copy-right {
   .single-news .single-news-inner-container {
     padding: 0;
   }
+}
+
+#partner article {
+  font-size: 2.4rem;
+  color: #444;
+  line-height: 4rem;
+}
+
+#partner article p {
+  line-height: 4rem;
 }
 

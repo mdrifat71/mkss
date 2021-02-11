@@ -45,13 +45,24 @@ class HomeCon extends Controller
         ->first()
         ->content;
 
+        
+        $meta =[
+            "description" => DB::table("siteinfo")->select("content")->where("key", "default_description")->get()->first()->content,
+            "keyword" => DB::table("siteinfo")->select("content")->where("key", "default_keyword")->get()->first()->content,
+            "robots" =>  DB::table("siteinfo")->select("content")->where("key", "default_robots")->get()->first()->content,
+            "title" =>   DB::table("siteinfo")->select("content")->where("key", "default_title")->get()->first()->content,
+
+        ];
+      
+            
         $data = [
             "current" => "home",
             "projects" => $projects,
             "news" => $news,
             "sectors" => $sectors,
             "primary_mobile" => $primary_mobile,
-            "primary_email" => $primary_email
+            "primary_email" => $primary_email,
+            "meta" => $meta
         ];
         return view("public.pages.home", $data);
     }

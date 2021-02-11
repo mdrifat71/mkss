@@ -30,6 +30,8 @@ class SingleProjectCon extends Controller
 
         if (empty($project))
             return redirect("/404");
+
+        
         return view("public.pages.single-project", $data);
 
     }
